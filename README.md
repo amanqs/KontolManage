@@ -6,7 +6,7 @@
 
 <p align="center">Emiko Robot is a modular bot running on python3 with anime theme and have a lot features.</p>
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/PayXr/EmikoRobot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/PayXr/nguyen-robot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 <p align="center">
 <a href="https://t.me/Aikarobot"> <img src="https://img.shields.io/badge/Emiko-Robot-blue?&logo=telegram" alt="Emiko on Telegram" /> </a><br>
