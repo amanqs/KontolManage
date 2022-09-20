@@ -83,7 +83,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm an Calsic management bot [✨](https://telegra.ph/file/9a73340c2a1ae967d9aeb.jpg)
+✪ I'm an Mahayabank Crew Bot [✨](https://telegra.ph/file/3e90d0b6b7478a6529801.jpg)
 ────────────────────────
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
@@ -98,7 +98,7 @@ buttons = [
     [
         InlineKeyboardButton(text="Get Help", callback_data="help_back"),
         InlineKeyboardButton(
-            text="Owner Bot", url="t.me/Kingsagapung"
+            text="Owner Bot", url="t.me/Ex_Mahayabank96"
         ),
     ],
     [
