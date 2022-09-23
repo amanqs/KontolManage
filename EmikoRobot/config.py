@@ -19,6 +19,7 @@ class Config(object):
     TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
     OWNER_ID = 1606221784  # If you dont know, run the bot and do /id in your private chat with it, also an integer
     OWNER_USERNAME = "excrybaby"
+    IMG_BOT = "https://telegra.ph/file/c923923cb01d9c8407508.jpg"
     SUPPORT_CHAT = "emikosupport"  # Your own group for support, do not add the @
     JOIN_LOGGER = (
         -1001432609692
