@@ -61,6 +61,7 @@ if ENV:
 
     JOIN_LOGGER = os.environ.get("JOIN_LOGGER", None)
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
+    IMG_BOT = os.environ.get("IMG_BOT", None)
 
     try:
         DRAGONS = {int(x) for x in os.environ.get("DRAGONS", "").split()}
@@ -144,6 +145,7 @@ else:
 
     JOIN_LOGGER = Config.JOIN_LOGGER
     OWNER_USERNAME = Config.OWNER_USERNAME
+    IMG_BOT = Config.IMG_BOT
     ALLOW_CHATS = Config.ALLOW_CHATS
     try:
         DRAGONS = {int(x) for x in Config.DRAGONS or []}
