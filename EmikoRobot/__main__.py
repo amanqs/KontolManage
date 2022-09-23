@@ -14,7 +14,9 @@ from platform import python_version as memek
 from EmikoRobot import (
     ALLOW_EXCL,
     CERT_PATH,
+    IMG_BOT,
     DONATION_LINK,
+    OWNER_USERNAME as uname,
     BOT_USERNAME as bu,
     LOGGER,
     OWNER_ID,
@@ -83,7 +85,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm an Mahayabank Crew Bot [✨](https://telegra.ph/file/3e90d0b6b7478a6529801.jpg)
+✪ I'm an {} [✨]({})
 ────────────────────────
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
@@ -98,7 +100,7 @@ buttons = [
     [
         InlineKeyboardButton(text="Get Help", callback_data="help_back"),
         InlineKeyboardButton(
-            text="Owner Bot", url="t.me/Ex_Mahayabank96"
+            text="Owner Bot", url=f"t.me/{uname}"
         ),
     ],
     [
@@ -218,6 +220,8 @@ def start(update: Update, context: CallbackContext):
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(
+                    dispatcher.bot.first_name,
+                    IMG_BOT,
                     escape_markdown(first_name),
                     escape_markdown(uptime),
                     sql.num_users(),
@@ -435,7 +439,7 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*๏ Emiko support chats*"
+            text="*๏ Cilik support chats*"
             f"\nJoin My Support Group/Channel for see or report a problem on {dispatcher.bot.first_name}.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -461,6 +465,7 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
+                    InlineKeyboardButton(text="Grey-ex", url="https://github.com/grey423"),                    
                     InlineKeyboardButton(text="sena-ex", url="https://github.com/kennedy-ex"),
                     InlineKeyboardButton(text="TheHamkerCat", url="https://github.com/TheHamkerCat"),
                  ],
