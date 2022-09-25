@@ -220,8 +220,8 @@ def start(update: Update, context: CallbackContext):
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(
-                    dispatcher.bot.first_name,
                     escape_markdown(first_name),
+                    dispatcher.bot.first_name,                    
                     escape_markdown(uptime),
                     sql.num_users(),
                     sql.num_chats()),                        
@@ -397,9 +397,9 @@ def emiko_about_callback(update, context):
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
-                PM_START_TEXT.format(
-                    dispatcher.bot.first_name,                    
+                PM_START_TEXT.format(                
                     escape_markdown(first_name),
+                    dispatcher.bot.first_name,
                     escape_markdown(uptime),
                     sql.num_users(),
                     sql.num_chats()),
@@ -521,8 +521,8 @@ def Source_about_callback(update, context):
         first_name = update.effective_user.first_name
         query.message.edit_text(
                 PM_START_TEXT.format(
-                    dispatcher.bot.first_name,
                     escape_markdown(first_name),
+                    dispatcher.bot.first_name,
                     escape_markdown(uptime),
                     sql.num_users(),
                     sql.num_chats()),
