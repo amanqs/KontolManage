@@ -85,7 +85,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm an {} [✨]({})
+✪ I'm an {} [✨](https://telegra.ph/file/0e133dc7343ae36451aa9.jpg)
 ────────────────────────
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
@@ -221,7 +221,6 @@ def start(update: Update, context: CallbackContext):
             update.effective_message.reply_text(
                 PM_START_TEXT.format(
                     dispatcher.bot.first_name,
-                    IMG_BOT,
                     escape_markdown(first_name),
                     escape_markdown(uptime),
                     sql.num_users(),
