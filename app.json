@@ -48,9 +48,13 @@
          "required": true,
          "value": "2088106582"
      },
-
       "STRING_SESSION": {
          "description": "Fill with telethon string session.",
+         "required": true,
+         "value": "" 
+      },
+      "IMG_BOT": {
+         "description": "YOUR IMAGE BOT.",
          "required": true,
          "value": "" 
       },
