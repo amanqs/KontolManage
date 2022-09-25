@@ -117,7 +117,7 @@ Click on the button bellow to get description about specifics command."""
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting @Kingsagapung \
  Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+ Those who cannot provide monetary support are welcome to help us develop the bot act ."""
 
 IMPORTED = {}
 MIGRATEABLE = []
