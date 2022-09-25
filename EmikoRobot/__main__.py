@@ -520,6 +520,7 @@ def Source_about_callback(update, context):
         first_name = update.effective_user.first_name
         query.message.edit_text(
                 PM_START_TEXT.format(
+                    dispatcher.bot.first_name,
                     escape_markdown(first_name),
                     escape_markdown(uptime),
                     sql.num_users(),
