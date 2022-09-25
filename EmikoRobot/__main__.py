@@ -87,7 +87,6 @@ PM_START_TEXT = """
 *Hello {} !*
 ✪ I'm an {} [✨](https://telegra.ph/file/0e133dc7343ae36451aa9.jpg)
 ────────────────────────
-× *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
 ────────────────────────
 ✪ Hit /help to see my available commands.
@@ -222,7 +221,6 @@ def start(update: Update, context: CallbackContext):
                 PM_START_TEXT.format(
                     escape_markdown(first_name),
                     dispatcher.bot.first_name,                    
-                    escape_markdown(uptime),
                     sql.num_users(),
                     sql.num_chats()),                        
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -400,7 +398,6 @@ def emiko_about_callback(update, context):
                 PM_START_TEXT.format(                
                     escape_markdown(first_name),
                     dispatcher.bot.first_name,
-                    escape_markdown(uptime),
                     sql.num_users(),
                     sql.num_chats()),
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -523,7 +520,6 @@ def Source_about_callback(update, context):
                 PM_START_TEXT.format(
                     escape_markdown(first_name),
                     dispatcher.bot.first_name,
-                    escape_markdown(uptime),
                     sql.num_users(),
                     sql.num_chats()),
                 reply_markup=InlineKeyboardMarkup(buttons),
