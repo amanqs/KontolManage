@@ -464,7 +464,7 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Grey-ex", url="https://github.com/grey423"),                    
+                    InlineKeyboardButton(text="grey-ex", url="https://github.com/grey423"),                    
                     InlineKeyboardButton(text="sena-ex", url="https://github.com/kennedy-ex"),
                     InlineKeyboardButton(text="TheHamkerCat", url="https://github.com/TheHamkerCat"),
                  ],
