@@ -434,10 +434,10 @@ async def inuka(client, message):
 
 
 __help__ = """
-❂ Kichiroô AI is the only ai system which can detect & reply upto 200 language's
+NandaPedia AI adalah satu-satunya sistem AI yang dapat mendeteksi & membalas hingga 200 bahasa
 
-❂ /chatbot [ON/OFF]: Enables and disables AI Chat mode.
-❂ /chatbot EN : Enables English only chatbot.
+❂ /chatbot [ON/OFF]: Mengaktifkan dan menonaktifkan mode AI Chat.
+❂ /chatbot EN : Mengaktifkan chatbot dalam bahasa Inggris saja.
 """
 
 __mod_name__ = "Chatbot"
