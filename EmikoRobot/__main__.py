@@ -85,7 +85,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm an {} [✨](https://telegra.ph/file/0e133dc7343ae36451aa9.jpg)
+✪ I'm an {} [✨](https://telegra.ph/file/3ad1cb99f3afb63ed25ea.jpg)
 ────────────────────────
 × `{}` *users, across* `{}` *chats.*
 ────────────────────────
@@ -93,18 +93,24 @@ PM_START_TEXT = """
 """
 
 buttons = [
-    [
-        InlineKeyboardButton(text=f"About {dispatcher.bot.first_name}", callback_data="emiko_"),
-    ],
-    [
-        InlineKeyboardButton(text="Get Help", callback_data="help_back"),
+        [
         InlineKeyboardButton(
-            text="Owner Bot", url=f"t.me/{uname}"
+            text="➕️ Tambahkan NandaPedia ➕️", url="t.me/NandaPediaBot?startgroup=true"
         ),
     ],
     [
+        InlineKeyboardButton(text="ɪɴꜱᴛᴀɢʀᴀᴍ", url="https://instagram.com/maestrocreation"
+        ),
         InlineKeyboardButton(
-            text="➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
+            text="ᴄʜᴀɴɴᴇʟ", url="t.me/nandapedia"
+        ),
+    ],
+    [
+        InlineKeyboardButton(text="ʙᴀɴᴛᴜᴀɴ", callback_data="emiko_support"
+       ),
+        InlineKeyboardButton(
+            text="ᴅɪʀᴇᴋᴛᴜʀ", url="t.me/tokonandapedia"
+       ),
     ],
 ]
 
@@ -114,7 +120,7 @@ Click on the button bellow to get description about specifics command."""
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @Kingsagapung \
+ You can support the project by contacting  \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot act ."""
 
@@ -199,7 +205,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="Go Back", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
                     ),
                 )
 
@@ -361,32 +367,22 @@ def emiko_about_callback(update, context):
     query = update.callback_query
     if query.data == "emiko_":
         query.message.edit_text(
-            text=f"๏ I'm *{dispatcher.bot.first_name}*, a powerful group management bot built to help you manage your group easily."
-            "\n• I can restrict users."
-            "\n• I can greet users with customizable welcome messages and even set a group's rules."
-            "\n• I have an advanced anti-flood system."
-            "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            "\n• I check for admins' permissions before executing any command and more stuffs"
-            f"\n\n_{dispatcher.bot.first_name}'s licensed under the GNU General Public License v3.0_"
-            f"\n\n Click on button bellow to get basic help for {dispatcher.bot.first_name}.",
+            text="🎧 Bantuan Perintah Music."
+            "\npilih menu di bawah ini untuk melihat bantuan Music Nanda Pedia ",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="emiko_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="emiko_notes"),
+                    InlineKeyboardButton(text="ᴘᴇʀɪɴᴛᴀʜ ᴀᴅᴍɪɴ", callback_data="emiko_admin"),
+                    InlineKeyboardButton(text="ᴘᴇʀɪɴᴛᴀʜ ʙᴏᴛ", callback_data="emiko_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="emiko_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="emiko_credit"),
+                    InlineKeyboardButton(text="ᴘᴇʀɪɴᴛᴀʜ ᴘʟᴀʏ", callback_data="source_"),
+                    InlineKeyboardButton(text="ᴘᴇʀɪɴᴛᴀʜ ᴇxsᴛʀᴀ", callback_data="emiko_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Source Code", url="https://github.com"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="emiko_back"),
+                    InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_support"),
                  ]
                 ]
             ),
@@ -408,45 +404,61 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_admin":
         query.message.edit_text(
-            text=f"*๏ Let's make your group bit effective now*"
-            f"\nCongragulations, {dispatcher.bot.first_name} now ready to manage your group."
-            "\n\n*Admin Tools*"
-            "\nBasic Admin tools help you to protect and powerup your group."
-            "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
-            "\n\n*Greetings*"
-            "\nLets set a welcome message to welcome new users coming to your group."
-            "\nsend `/setwelcome [message]` to set a welcome message!",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
-            ),
-        )
-
-    elif query.data == "emiko_notes":
-        query.message.edit_text(
-            text=f"<b>๏ Setting up notes</b>"
-            f"\nYou can save message/media/audio or anything as notes"
-            f"\nto get a note simply use # at the beginning of a word"
-            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            text=f"*👮 PERINTAH ADMIN."
+            "\n\nc singkatan dari pemutaran Channel."
+            "\n • /pause or /cpause - Jeda musik yang diputar."
+            "\n • /resume or /cresume- Lanjutkan musik yang dijeda."
+            "\n • /mute or /cmute- Matikan musik yang diputar."
+            "\n •/unmute or /cunmute- Suarakan musik yang dibisukan."
+            "\n • /skip or /cskip- Lewati musik yang sedang diputar."
+            "\n • /musicstop or /cstop- Hentikan pemutaran musik."
+            "\n • /shuffle or /cshuffle- Secara acak mengacak daftar putar yang antri."
+            "\n • /seek or /cseek - Teruskan Cari musik sesuai durasi Anda."
+            "\n • /seekback or /cseekback - Mundur Carilah musik sesuai durasi Anda."
+            "\n\n✅Lewati."
+            "\n • /skip or /cskip contoh 3 ."
+            "\n • Melewati musik ke nomor antrian yang ditentukan. Contoh: /skip 3 akan melewatkan musik ke musik antrian ketiga dan akan mengabaikan musik 1 dan 2 dalam antrian."
+            "\n\n✅Loop."
+            "\n • /loop or /cloop [enable/disable] atau [Angka antara 1-10] ."
+            "\n • Saat diaktifkan, bot memutar musik yang sedang diputar menjadi 1-10 kali pada obrolan suara. Default ke 10 kali."
+            "\n\n✅Pengguna Auth."
+            "\nPengguna Auth dapat menggunakan perintah admin tanpa hak admin di Group Anda."
+            "\n • /auth [Username] - Tambahkan pengguna ke AUTH LIST dari grup."
+            "\n • /unauth [Username] - Hapus pengguna dari AUTH LIST grup."
+            "\n • /authusers - Periksa DAFTAR AUTH grup",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
+                [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")]]
+            ),
+        )
+    elif query.data == "emiko_notes":
+        query.message.edit_text(
+            text="🤖 PERINTAH BOT"
+            "\n\n • /stats - Dapatkan 10 Trek Global Stats Teratas, 10 Pengguna Bot Teratas, 10 Obrolan Teratas di bot, 10 Teratas Dimainkan dalam obrolan, dll."
+            "\n\n • /sudolist - Periksa Sudo Pengguna Nnda Music Bot,"
+            "\n\n • /lyrics [Nama Musik] mencari Lirik untuk Musik tertentu di web."
+            "\n\n • /song [Nama Trek] atau [Tautan YT] - Unduh trek apa pun dari youtube dalam format mp3 atau mp4."
+            "\n\n • /player -  Dapatkan Panel Bermain interaktif."
+            "\n\n • c singkatan dari pemutaran saluran."
+            "\n\n • /queue or /cqueue- Periksa Daftar Antrian Musik",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")]]
             ),
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*๏ Cilik support chats*"
-            f"\nJoin My Support Group/Channel for see or report a problem on {dispatcher.bot.first_name}.",
+            text="*📝 Bantuan Perintah Nanda Pedia*"
+            "\npilih tombol dibawah untuk melohat bantuan perintah Nanda Pedia.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/CilikSupport"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/CilikProject"),
+                    InlineKeyboardButton(text="🎧ᴍᴜsɪᴄ", callback_data="emiko_"),
+                    InlineKeyboardButton(text="🤖ᴍᴀɴᴀɢᴇ", callback_data="help_back"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
+                    InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),
                  
                  ]
                 ]
@@ -456,34 +468,31 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_credit":
         query.message.edit_text(
-            text=f"๏ Credis for {dispatcher.bot.first_name}\n"
-            f"\nHere Developers Making And Give Inspiration For Made The {dispatcher.bot.first_name}",
+            text="⚒️ PERINTAH EKSTRA"
+            "\n\n✅Perintah Ekstra."
+            "\n\n • /mstart - Mulai Bot Musik."
+            "\n\n • /mhelp - Dapatkan Menu Pembantu Perintah dengan penjelasan rinci tentang perintah."
+            "\n\n • /mping- Ping Bot dan periksa statistik Ram, Cpu, dll dari Bot."
+            "\n\n✅Pengaturan Music."
+            "\n • /musicsettings - Dapatkan pengaturan grup lengkap dengan tombol sebaris."
+            "\n\n🔗 Opsi di Pengaturan."
+            "\n\n1️⃣ Kamu Bisa set ingin Kualitas Audio Anda streaming di obrolan suara."
+            "\n\n2️⃣ You can set Kualitas Video Anda ingin streaming di obrolan suara."
+            "\n\n3️⃣ Auth Users:- Anda dapat mengubah mode perintah admin dari sini ke semua orang atau hanya admin. Jika semua orang, siapa pun yang ada di grup Anda dapat menggunakan perintah admin (seperti /skip, /stop dll)."
+            "\n\n4️⃣ Clean Mode: Saat diaktifkan, hapus pesan bot setelah 5 menit dari grup Anda untuk memastikan obrolan Anda tetap bersih dan baik."
+            "\n\n5️⃣ Command Clean : Saat diaktifkan, Bot akan menghapus perintah yang dieksekusi (/play, /pause, /shuffle, /stop etc) langsung."
+            "\n\n6️⃣ Play Settings."
+            "\n\n • /playmode - Dapatkan panel pengaturan pemutaran lengkap dengan tombol tempat Anda dapat mengatur pengaturan pemutaran grup Anda."
+            "\n\nOpsi dalam mode putar."
+            "\n\n1️⃣ Mode Pencarian [Langsung atau Inline] - Mengubah mode pencarian Anda saat Anda memberikan mode /play."
+            "\n\n2️⃣ Perintah Admin [Semua orang atau Admin] - Jika semua orang, siapa pun yang ada di grup Anda akan dapat menggunakan perintah admin (seperti /skip, /stop dll)."
+            "\n\n3️⃣ Jenis Bermain [Everyone or Admins] - Jika admin, hanya admin yang ada di grup yang dapat memutar musik di obrolan suara",
             parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="grey-ex", url="https://github.com/grey423"),                    
-                    InlineKeyboardButton(text="sena-ex", url="https://github.com/kennedy-ex"),
-                    InlineKeyboardButton(text="TheHamkerCat", url="https://github.com/TheHamkerCat"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Feri", url="https://github.com/FeriEXP"),
-                    InlineKeyboardButton(text="riz-ex", url="https://github.com/riz-ex"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Anime Kaizoku", url="https://github.com/animekaizoku"),
-                    InlineKeyboardButton(text="TheGhost Hunter", url="https://github.com/HuntingBots"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Inuka Asith", url="https://github.com/inukaasith"),
-                    InlineKeyboardButton(text="Noob-Kittu", url="https://github.com/noob-kittu"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Queen Arzoo", url="https://github.com/QueenArzoo"),
-                    InlineKeyboardButton(text="Paul Larsen", url="https://github.com/PaulSonOfLars"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
+                    InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")
                  ]
                 ]
             ),
@@ -493,23 +502,26 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text="๏›› This advance command for Musicplayer."
-            "\n\n๏ Command for admins only."
-            "\n • `/reload` - For refreshing the adminlist."
-            "\n • `/pause` - To pause the playback."
-            "\n • `/resume` - To resuming the playback You've paused."
-            "\n • `/skip` - To skipping the player."
-            "\n • `/end` - For end the playback."
-            "\n • `/musicplayer <on/off>` - Toggle for turn ON or turn OFF the musicplayer."
-            "\n\n๏ Command for all members."
-            "\n • `/play` <query /reply audio> - Playing music via YouTube."
-            "\n • `/playlist` - To playing a playlist of groups or your personal playlist",
+            text="🎵 PERINTAH PLAY."
+            "\n\n✅Perintah Play."
+            "\n\nPerintah yang tersedia = play , vplay , cplay."
+            "\n\nPerintah ForcePlay = playforce , vplayforce , cplayforce."
+            "\n\nc singkatan dari pemutaran Channel."
+            "\nv singkatan dari pemutaran video."
+            "\nforce singkatan dari force play."
+            "\n\n • /play atau /vplay atau /cplay  - Bot akan mulai memainkan kueri yang Anda berikan di obrolan suara atau Streaming tautan langsung di obrolan suara."
+            "\n\n • /playforce atau /vplayforce atau /cplayforce -  Force Play menghentikan trek yang sedang diputar pada obrolan suara dan mulai memutar trek yang dicari secara instan tanpa mengganggu/mengosongkan antrean."
+            "\n\n • /channelplay [Nama pengguna atau id obrolan] atau [Disable] - Hubungkan saluran ke grup dan streaming musik di obrolan suara saluran dari grup Anda."
+            "\n\n✅Daftar Putar Server Bot."
+            "\n • /playlist  - Periksa Daftar Putar Tersimpan Anda Di Server."
+            "\n • /deleteplaylist - Hapus semua musik yang disimpan di daftar putar Anda."
+            "\n • /play  - Mulai mainkan Daftar Putar Tersimpan Anda dari Server",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="emiko_")
+                    InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")
                  ]
                 ]
             ),
@@ -537,12 +549,12 @@ def get_help(update: Update, context: CallbackContext):
         if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
             module = args[1].lower()
             update.effective_message.reply_text(
-                f"Contact me in PM to get help of {module.capitalize()}",
+                f"Hubungi saya di PM untuk mendapatkan bantuan {module.capitalize()}",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                text="Help",
+                                text="👨‍💼 Bantuan",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -553,12 +565,12 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
+            "Hubungi saya di PM untuk mendapatkan daftar perintah.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Help",
+                            text="ʙᴀɴᴛᴜᴀɴ ᴘᴇʀɪɴᴛᴀʜ ↗️",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
@@ -579,7 +591,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_support")]]
             ),
         )
 
@@ -751,7 +763,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1866066766:
+        if OWNER_ID != 1252482197:
             update.effective_message.reply_text(
                 "I'm free for everyone ❤️ If you wanna make me smile, just join"
                 "[My Channel]({})".format(DONATION_LINK),
