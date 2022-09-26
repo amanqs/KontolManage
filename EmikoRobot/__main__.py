@@ -84,13 +84,12 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-[.](https://telegra.ph/file/3ad1cb99f3afb63ed25ea.jpg)
-*Hello {} !*
-✪ I'm an {} 
+*ʜᴇʟʟᴏ {} !*
+[ɴᴀɴᴅᴀᴘᴇᴅɪᴀ](t.me/NandaPediaBot) ʙᴏᴛ ʏᴀɴɢ ᴘᴀʟɪɴɢ sᴜᴘᴇʀ ʟᴇɴɢᴋᴀᴘ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴀɴᴛᴜᴍᴜ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴏᴜᴘ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ʟᴇʙɪʜ ᴍᴜᴅᴀʜ, ɴʏᴀᴍᴀɴ, & ᴀᴍᴀɴ. ✨ (https://telegra.ph/file/a99d961294b1b6cb192a7.jpg)
 ────────────────────────
-× `{}` *users, across* `{}` *chats.*
+× `{}` *ᴜꜱᴇʀꜱ, ᴀᴄʀᴏꜱꜱ* `{}` *ᴄʜᴀᴛꜱ.*
 ────────────────────────
-✪ Hit /help to see my available commands.
+ᴛᴇᴋᴀɴ /help ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴅᴀꜰᴛᴀʀ ᴘᴇʀɪɴᴛᴀʜ ʏᴀɴɢ ᴛᴇʀꜱᴇᴅɪᴀ.
 """
 
 buttons = [
@@ -206,7 +205,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="🔙 ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
                     ),
                 )
 
@@ -226,8 +225,7 @@ def start(update: Update, context: CallbackContext):
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(
-                    escape_markdown(first_name),
-                    dispatcher.bot.first_name,                    
+                    escape_markdown(first_name),                 
                     sql.num_users(),
                     sql.num_chats()),                        
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -323,7 +321,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="Go Back", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="🔙 ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
                 ),
             )
 
@@ -383,7 +381,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="ᴘᴇʀɪɴᴛᴀʜ ᴇxsᴛʀᴀ", callback_data="emiko_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_support"),
+                    InlineKeyboardButton(text="🔙 ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_support"),
                  ]
                 ]
             ),
@@ -394,7 +392,6 @@ def emiko_about_callback(update, context):
         query.message.edit_text(
                 PM_START_TEXT.format(                
                     escape_markdown(first_name),
-                    dispatcher.bot.first_name,
                     sql.num_users(),
                     sql.num_chats()),
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -429,7 +426,7 @@ def emiko_about_callback(update, context):
             "\n • /authusers - Periksa DAFTAR AUTH grup",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")]]
+                [[InlineKeyboardButton(text="🔙 ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")]]
             ),
         )
     elif query.data == "emiko_notes":
@@ -444,13 +441,13 @@ def emiko_about_callback(update, context):
             "\n\n • /queue or /cqueue- Periksa Daftar Antrian Musik",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")]]
+                [[InlineKeyboardButton(text="🔙 ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")]]
             ),
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
             text="*📝 Bantuan Perintah Nanda Pedia*"
-            "\npilih tombol dibawah untuk melohat bantuan perintah Nanda Pedia.",
+            "\npilih tombol dibawah untuk melihat bantuan perintah Nanda Pedia.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -459,7 +456,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="🤖ᴍᴀɴᴀɢᴇ", callback_data="help_back"),
                  ],
                  [
-                    InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),
+                    InlineKeyboardButton(text="🔙 ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),
                  
                  ]
                 ]
@@ -475,7 +472,7 @@ def emiko_about_callback(update, context):
             "\n\n • /mhelp - Dapatkan Menu Pembantu Perintah dengan penjelasan rinci tentang perintah."
             "\n\n • /mping- Ping Bot dan periksa statistik Ram, Cpu, dll dari Bot."
             "\n\n✅Pengaturan Music."
-            "\n • /musicsettings - Dapatkan pengaturan grup lengkap dengan tombol sebaris."
+            "\n • /msettings - Dapatkan pengaturan grup lengkap dengan tombol sebaris."
             "\n\n🔗 Opsi di Pengaturan."
             "\n\n1️⃣ Kamu Bisa set ingin Kualitas Audio Anda streaming di obrolan suara."
             "\n\n2️⃣ You can set Kualitas Video Anda ingin streaming di obrolan suara."
@@ -493,7 +490,7 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")
+                    InlineKeyboardButton(text="🔙 ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")
                  ]
                 ]
             ),
@@ -522,7 +519,7 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")
+                    InlineKeyboardButton(text="🔙 ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")
                  ]
                 ]
             ),
@@ -532,7 +529,6 @@ def Source_about_callback(update, context):
         query.message.edit_text(
                 PM_START_TEXT.format(
                     escape_markdown(first_name),
-                    dispatcher.bot.first_name,
                     sql.num_users(),
                     sql.num_chats()),
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -592,7 +588,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_support")]]
+                [[InlineKeyboardButton(text="🔙 ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_support")]]
             ),
         )
 
