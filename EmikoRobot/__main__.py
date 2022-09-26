@@ -92,7 +92,7 @@ PM_START_TEXT = """
 -𝙀𝙓𝙋𝙀𝘾𝙏 𝙈𝙊𝙍𝙀, 𝙋𝘼𝙔 𝙇𝙀𝙎𝙎-
 sᴛᴏʀᴇ : @nandapedia
 ᴏʀᴅᴇʀ : @tokonandapedia
-ғᴏᴜɴᴅᴇʀ : @anandachisato
+ғᴏᴜɴᴅᴇʀ : @chisatoananda
 
 ᴛᴇᴋᴀɴ /help ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴅᴀꜰᴛᴀʀ ᴘᴇʀɪɴᴛᴀʜ ʏᴀɴɢ ᴛᴇʀꜱᴇᴅɪᴀ.
 """
