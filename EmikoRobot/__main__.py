@@ -205,7 +205,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="↵ ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
                     ),
                 )
 
@@ -321,7 +321,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="↵ ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
                 ),
             )
 
@@ -381,7 +381,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="ᴘᴇʀɪɴᴛᴀʜ ᴇxsᴛʀᴀ", callback_data="emiko_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="↵ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_support"),
+                    InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_support"),
                  ]
                 ]
             ),
@@ -426,7 +426,7 @@ def emiko_about_callback(update, context):
             "\n • /authusers - Periksa DAFTAR AUTH grup",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="↵ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")]]
+                [[InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")]]
             ),
         )
     elif query.data == "emiko_notes":
@@ -441,7 +441,7 @@ def emiko_about_callback(update, context):
             "\n\n • /queue or /cqueue- Periksa Daftar Antrian Musik",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="↵ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")]]
+                [[InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")]]
             ),
         )
     elif query.data == "emiko_support":
@@ -456,7 +456,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="🤖ᴍᴀɴᴀɢᴇ", callback_data="help_back"),
                  ],
                  [
-                    InlineKeyboardButton(text="↵ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),
+                    InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),
                  
                  ]
                 ]
@@ -490,7 +490,7 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="↵ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")
+                    InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")
                  ]
                 ]
             ),
@@ -519,7 +519,7 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="↵ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")
+                    InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")
                  ]
                 ]
             ),
@@ -588,7 +588,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="↵ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_support")]]
+                [[InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_support")]]
             ),
         )
 
