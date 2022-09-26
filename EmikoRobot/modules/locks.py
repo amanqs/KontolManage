@@ -536,27 +536,27 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-Do stickers annoy you? or want to avoid people sharing links? or pictures? \
-You're in the right place!
-The locks module allows you to lock away some common items in the \
-telegram world; the bot will automatically delete them!
+Apakah stiker mengganggu Anda? atau ingin menghindari orang berbagi tautan? atau gambar? \
+Anda berada di tempat yang tepat!
+Modul kunci memungkinkan Anda untuk mengunci beberapa item umum di \
+dunia telegram; bot akan secara otomatis menghapusnya!
 
-❂ /locktypes*:* Lists all possible locktypes
+❂ /locktypes*:* Mencantumkan semua kemungkinan locktypes
 
-*Admins only:*
-❂ /lock <type>*:* Lock items of a certain type (not available in private)
-❂ /unlock <type>*:* Unlock items of a certain type (not available in private)
-❂ /locks*:* The current list of locks in this chat.
+*Hanya Admin :*
+❂ /lock <type>*:* Mengunci item dengan tipe tertentu (tidak tersedia secara pribadi)
+❂ /unlock <type>*:* Buka kunci item dari jenis tertentu (tidak tersedia secara pribadi)
+❂ /locks*:* Daftar kunci saat ini dalam obrolan ini.
 
-Locks can be used to restrict a group's users.
-eg:
-Locking urls will auto-delete all messages with urls, locking stickers will restrict all \
-non-admin users from sending stickers, etc.
-Locking bots will stop non-admins from adding bots to the chat.
+Kunci dapat digunakan untuk membatasi pengguna grup.
+misalnya:
+Mengunci url akan otomatis menghapus semua pesan dengan url, mengunci stiker akan membatasi semua \
+pengguna non-admin dari mengirim stiker, dll.
+Mengunci bot akan menghentikan non-admin menambahkan bot ke obrolan.
 
-*Note:*
-❂ Unlocking permission *info* will allow members (non-admins) to change the group information, such as the description or the group name
-❂ Unlocking permission *pin* will allow members (non-admins) to pinned a message in a group
+*Catatan:*
+Izin membuka *info* akan memungkinkan anggota (non-admin) untuk mengubah informasi grup, seperti deskripsi atau nama grup
+Izin membuka kunci * pin * akan memungkinkan anggota (non-admin) untuk menyematkan pesan dalam grup
 """
 
 __mod_name__ = "Locks"
