@@ -191,15 +191,15 @@ if is_module_loaded(FILENAME):
     __help__ = """
 ──「 Log channel 」──
 
-❂ /logchannel*:* get log channel info
-❂ /setlog*:* set the log channel.
-❂ /unsetlog*:* unset the log channel.
+❂ /logchannel*:* dapatkan info saluran log
+❂ /setlog*:* mengatur saluran log.
+❂ /unsetlog*:* hapus saluran log.
 
-*Setting the log channel is done by*:
+*Pengaturan saluran log dilakukan dengan*:
 
-➩ adding the bot to the desired channel (as an admin!)
-➩ sending /setlog in the channel
-➩ forwarding the /setlog to the group
+➩ menambahkan bot ke saluran yang diinginkan (sebagai admin!)
+➩ mengirim / setlog di saluran
+➩ meneruskan /setlog ke grup
 """
 
     __mod_name__ = "Log Channel​"
