@@ -84,8 +84,9 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
+[.](https://telegra.ph/file/3ad1cb99f3afb63ed25ea.jpg)
 *Hello {} !*
-✪ I'm an {} [✨](https://telegra.ph/file/3ad1cb99f3afb63ed25ea.jpg)
+✪ I'm an {} 
 ────────────────────────
 × `{}` *users, across* `{}` *chats.*
 ────────────────────────
@@ -95,7 +96,7 @@ PM_START_TEXT = """
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ Tambahkan NandaPedia ➕️", url="t.me/NandaPediaBot?startgroup=true"
+            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ɴᴀɴᴅᴀᴘᴇᴅɪᴀ ➕️", url="t.me/NandaPediaBot?startgroup=true"
         ),
     ],
     [
