@@ -968,30 +968,30 @@ def bug_reporting(update: Update, _: CallbackContext):
 
 __help__ = """
 *Perintah Pengguna*:
-⋙ /admins*:* daftar admin dalam obrolan
-⋙ /pinned*:* untuk mendapatkan pesan yang disematkan saat ini.
+❂ /admins*:* daftar admin dalam obrolan
+❂ /pinned*:* untuk mendapatkan pesan yang disematkan saat ini.
 
 *Perintah Berikut hanya Admin:*
-⋙ /pin*:* secara diam-diam menyematkan pesan yang dibalas - tambahkan `'loud'`` atau `'notify'` untuk memberikan notifikasi kepada pengguna
-⋙ /unpin*:* melepas pin pesan yang sedang disematkan
-⋙ /invitelink*:* mendapat invitelink
-⋙ /promote*:* mempromosikan pengguna yang dibalas
-⋙ /fullpromote*:* mempromosikan pengguna yang dibalas dengan hak penuh
-⋙ /demote*:* mendemosikan balasan yang dibalas oleh pengguna
-⋙ /title <title here>*:* menetapkan judul khusus untuk admin yang dipromosikan bot
-⋙ /admincache*:* paksa refresh daftar admin
-⋙ /del*:* menghapus pesan yang Anda balas
-⋙ /purge*:* menghapus semua pesan antara ini dan pesan yang dibalas.
-⋙ /purge <integer X>*:* menghapus pesan yang dibalas, dan X pesan yang mengikutinya jika membalas pesan.
-⋙ /setgtitle <text>*:* atur judul grup
-⋙ /setgpic*:* membalas gambar untuk ditetapkan sebagai foto grup
-⋙ /setdesc*:* Setel deskripsi grup
-⋙ /setsticker*:* Setel stiker grup
+❂ /pin*:* secara diam-diam menyematkan pesan yang dibalas - tambahkan `'loud'`` atau `'notify'` untuk memberikan notifikasi kepada pengguna
+❂ /unpin*:* melepas pin pesan yang sedang disematkan
+❂ /invitelink*:* mendapat invitelink
+❂ /promote*:* mempromosikan pengguna yang dibalas
+❂ /fullpromote*:* mempromosikan pengguna yang dibalas dengan hak penuh
+❂ /demote*:* mendemosikan balasan yang dibalas oleh pengguna
+❂ /title <title here>*:* menetapkan judul khusus untuk admin yang dipromosikan bot
+❂ /admincache*:* paksa refresh daftar admin
+❂ /del*:* menghapus pesan yang Anda balas
+❂ /purge*:* menghapus semua pesan antara ini dan pesan yang dibalas.
+❂ /purge <integer X>*:* menghapus pesan yang dibalas, dan X pesan yang mengikutinya jika membalas pesan.
+❂ /setgtitle <text>*:* atur judul grup
+❂ /setgpic*:* membalas gambar untuk ditetapkan sebagai foto grup
+❂ /setdesc*:* Setel deskripsi grup
+❂ /setsticker*:* Setel stiker grup
 
 *Aturan*:
-⋙ /rules*:* dapatkan aturan untuk obrolan ini.
-⋙ /setrules <aturan Anda di sini>*:* tetapkan aturan untuk obrolan ini.
-⋙ /clearrules*:* hapus aturan untuk obrolan ini.
+❂ /rules*:* dapatkan aturan untuk obrolan ini.
+❂ /setrules <aturan Anda di sini>*:* tetapkan aturan untuk obrolan ini.
+❂ /clearrules*:* hapus aturan untuk obrolan ini.
 """
 
 SET_DESC_HANDLER = CommandHandler("setdesc", set_desc, filters=Filters.chat_type.groups, run_async=True)
