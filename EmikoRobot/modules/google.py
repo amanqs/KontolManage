@@ -285,7 +285,7 @@ __help__ = """
 ❂ /reverse: Melakukan pencarian gambar terbalik dari media yang dibalas.
 ❂ /gps <lokasi>*:* Dapatkan lokasi gps.
 ❂ /github <namapengguna>*:* Dapatkan informasi tentang pengguna GitHub.
-❂ /coyntry <nama negara>*:* Mengumpulkan info tentang negara tertentu
+❂ /country <nama negara>*:* Mengumpulkan info tentang negara tertentu
 ❂ /imdb <Nama film>*:* Dapatkan info lengkap tentang film dengan imdb.com
 Nanda <query>*:* Nanda menjawab pertanyaan
 
