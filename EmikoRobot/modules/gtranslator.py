@@ -15,18 +15,18 @@ from EmikoRobot.modules.disable import DisableAbleCommandHandler
 
 
 __help__ = """ 
-Use this module to translate stuff!
-*Commands:*
-❂ /tl (or /tr): as a reply to a message, translates it to English.
-❂ /tl <lang>: translates to <lang>
-eg: /tl ja: translates to Japanese.
-❂ /tl <source>//<dest>: translates from <source> to <lang>.
-eg:  /tl ja//en: translates from Japanese to English.
-❂ /langs: get a list of supported languages for translation.
+Gunakan modul ini untuk menerjemahkan barang!
+*Perintah:*
+❂ /tl (atau /tr): sebagai balasan pesan, menerjemahkannya ke bahasa Inggris.
+❂ /tl <lang>: diterjemahkan menjadi <lang>
+misalnya: /tl ja: diterjemahkan ke bahasa Jepang.
+❂ /tl <source>//<dest>: menerjemahkan dari <source> ke <lang>.
+misalnya: /tl ja//en: menerjemahkan dari bahasa Jepang ke bahasa Inggris.
+❂ /langs: dapatkan daftar bahasa yang didukung untuk terjemahan.
 
-I can convert text to voice and voice to text..
-❂ /tts <lang code>*:* Reply to any message to get text to speech output
-❂ /stt*:* Type in reply to a voice message(support english only) to extract text from it.
+Saya dapat mengonversi teks menjadi suara dan suara menjadi teks..
+❂ /tts <lang code>*:* Membalas pesan apa pun untuk mendapatkan keluaran teks ke ucapan
+❂ /stt*:* Ketik balasan ke pesan suara (hanya mendukung bahasa Inggris) untuk mengekstrak teks darinya.
 *Language Codes*
 `af,am,ar,az,be,bg,bn,bs,ca,ceb,co,cs,cy,da,de,el,en,eo,es,
 et,eu,fa,fi,fr,fy,ga,gd,gl,gu,ha,haw,hi,hmn,hr,ht,hu,hy,
