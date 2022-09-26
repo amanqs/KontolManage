@@ -970,7 +970,6 @@ __help__ = """
 *Perintah Pengguna*:
 ❂ /admins*:* daftar admin dalam obrolan
 ❂ /pinned*:* untuk mendapatkan pesan yang disematkan saat ini.
-
 *Perintah Berikut hanya Admin:*
 ❂ /pin*:* secara diam-diam menyematkan pesan yang dibalas - tambahkan `'loud'`` atau `'notify'` untuk memberikan notifikasi kepada pengguna
 ❂ /unpin*:* melepas pin pesan yang sedang disematkan
@@ -987,7 +986,6 @@ __help__ = """
 ❂ /setgpic*:* membalas gambar untuk ditetapkan sebagai foto grup
 ❂ /setdesc*:* Setel deskripsi grup
 ❂ /setsticker*:* Setel stiker grup
-
 *Aturan*:
 ❂ /rules*:* dapatkan aturan untuk obrolan ini.
 ❂ /setrules <aturan Anda di sini>*:* tetapkan aturan untuk obrolan ini.
