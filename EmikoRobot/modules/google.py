@@ -279,15 +279,15 @@ async def apk(e):
 __mod_name__ = "Search"
 
 __help__ = """
-❂ /google <query>*:* Perform a google search
-❂ /image <query>*:* Search Google for images and returns them\nFor greater no. of results specify lim, For eg: `/img hello lim=10`
-❂ /app <appname>*:* Searches for an app in Play Store and returns its details.
-❂ /reverse: Does a reverse image search of the media which it was replied to.
-❂ /gps <location>*:* Get gps location.
-❂ /github <username>*:* Get information about a GitHub user.
-❂ /country <country name>*:* Gathering info about given country
-❂ /imdb <Movie name>*:* Get full info about a movie with imdb.com
-❂ Emiko <query>*:* Emiko answers the query
+❂ /google <query>*:* Lakukan pencarian google
+❂ /image <query>*:* Cari gambar di Google dan kembalikan\nUntuk no yang lebih besar. dari hasil tentukan lim, Misalnya: `/img hello lim=10`
+❂ /app <appname>*:* Mencari aplikasi di Play Store dan mengembalikan detailnya.
+❂ /reverse: Melakukan pencarian gambar terbalik dari media yang dibalas.
+❂ /gps <lokasi>*:* Dapatkan lokasi gps.
+❂ /github <namapengguna>*:* Dapatkan informasi tentang pengguna GitHub.
+❂ /coyntry <nama negara>*:* Mengumpulkan info tentang negara tertentu
+❂ /imdb <Nama film>*:* Dapatkan info lengkap tentang film dengan imdb.com
+Nanda <query>*:* Nanda menjawab pertanyaan
 
-  💡Ex: `Emiko where is Japan?`
+  💡Ex: `Nanda where is Japan?`
 """
