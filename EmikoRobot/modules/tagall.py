@@ -113,10 +113,10 @@ __mod_name__ = "Tag all"
 __help__ = """
 ──「 Mention all func 」──
 
-Emiko Can Be a Mention Bot for your group.
+Nanda Dapat Menjadi Mention Bot untuk grup Anda.
 
-Only admins can tag all.  here is a list of commands
+Hanya admin yang dapat menandai semua. di sini adalah daftar perintah
 
-❂ /tagall or @all (reply to message or add another message) To mention all members in your group, without exception.
-❂ /cancel for canceling the mention-all.
+❂ /tagall atau @all (membalas pesan atau menambahkan pesan lain) Untuk menyebut semua anggota di grup Anda, tanpa kecuali.
+❂ /cancel untuk membatalkan mention-all.
 """
