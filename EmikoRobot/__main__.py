@@ -451,7 +451,7 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*📝 Bantuan Perintah Nanda Pedia*"
+            text="*Bantuan Perintah Nanda Pedia* [📝](https://telegra.ph/file/709ca8028b63d5fbfefbb.jpg)"
             "\npilih tombol dibawah untuk melihat bantuan perintah Nanda Pedia.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
