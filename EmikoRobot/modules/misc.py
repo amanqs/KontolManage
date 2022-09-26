@@ -32,27 +32,27 @@ from EmikoRobot.modules.helper_funcs.chat_status import sudo_plus
 from EmikoRobot.modules.helper_funcs.alternate import send_action, typing_action
 
 MARKDOWN_HELP = f"""
-Markdown is a very powerful formatting tool supported by telegram. {dispatcher.bot.first_name} has some enhancements, to make sure that \
-saved messages are correctly parsed, and to allow you to create buttons.
+Penurunan harga adalah alat pemformatan yang sangat kuat yang didukung oleh telegram. {dispatcher.bot.first_name} memiliki beberapa penyempurnaan, untuk memastikan bahwa \
+pesan yang disimpan diurai dengan benar, dan untuk memungkinkan Anda membuat tombol.
 
-❂ <code>_italic_</code>: wrapping text with '_' will produce italic text
-❂ <code>*bold*</code>: wrapping text with '*' will produce bold text
-❂ <code>`code`</code>: wrapping text with '`' will produce monospaced text, also known as 'code'
-❂ <code>[sometext](someURL)</code>: this will create a link - the message will just show <code>sometext</code>, \
-and tapping on it will open the page at <code>someURL</code>.
-<b>Example:</b><code>[test](example.com)</code>
+❂ <code>_italic_</code>: membungkus teks dengan '_' akan menghasilkan teks miring
+❂ <code>*bold*</code>: membungkus teks dengan '*' akan menghasilkan teks tebal
+❂ <code>`code`</code>: membungkus teks dengan ''`' akan menghasilkan teks monospace, juga dikenal sebagai 'kode'
+❂ <code>[sometext](someURL)</code>: ini akan membuat tautan - pesan hanya akan menampilkan <code>sometext</code>, \
+dan mengetuknya akan membuka halaman di <code>someURL</code>.
+<b>Contoh:</b><code>[test](example.com)</code>
 
-❂ <code>[buttontext](buttonurl:someURL)</code>: this is a special enhancement to allow users to have telegram \
-buttons in their markdown. <code>buttontext</code> will be what is displayed on the button, and <code>someurl</code> \
-will be the url which is opened.
-<b>Example:</b> <code>[This is a button](buttonurl:example.com)</code>
+❂ <code>[buttontext](buttonurl:someURL)</code>: ini adalah peningkatan khusus untuk memungkinkan pengguna memiliki telegram \
+tombol di penurunan harga mereka. <code>buttontext</code> akan menjadi apa yang ditampilkan pada tombol, dan <code>someurl</code> \
+akan menjadi url yang dibuka.
+<b>Contoh:</b> <code>[Ini adalah tombol](buttonurl:example.com)</code>
 
-If you want multiple buttons on the same line, use :same, as such:
-<code>[one](buttonurl://example.com)
-[two](buttonurl://google.com:same)</code>
-This will create two buttons on a single line, instead of one button per line.
+Jika Anda ingin beberapa tombol pada baris yang sama, gunakan :sama, seperti:
+<code>[satu](buttonurl://example.com)
+[dua](buttonurl://google.com:sama)</code>
+Ini akan membuat dua tombol pada satu baris, bukan satu tombol per baris.
 
-Keep in mind that your message <b>MUST</b> contain some text other than just a button!
+Ingatlah bahwa pesan Anda <b>HARUS</b> berisi beberapa teks selain hanya sebuah tombol!
 """
 
 
