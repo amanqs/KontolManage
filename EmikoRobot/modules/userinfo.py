@@ -6,14 +6,27 @@ import datetime
 import platform
 import time
 
-from psutil import cpu_percent, virtual_memory, disk_usage, boot_time
+from psutil import (
+  cpu_percent,
+  virtual_memory,
+  disk_usage,
+  boot_time,
+)
 from platform import python_version
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import events
 
-from telegram import MAX_MESSAGE_LENGTH, ParseMode, Update, MessageEntity, __version__ as ptbver, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import CallbackContext, CommandHandler
+from telegram import (
+  MAX_MESSAGE_LENGTH,
+  ParseMode,
+  Update,
+  MessageEntity,
+  __version__ as ptbver,
+  InlineKeyboardButton,
+  InlineKeyboardMarkup,
+)
+from telegram.ext import CallbackContext, CommandHandler, CallbackQueryHandler
 from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
@@ -316,7 +329,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nThe Disaster level of this person is 'Soldier'."
         disaster_level_present = True
     elif user.id == 1829047705:
-         text += "\n\nOwner Of A Bot. Queen Of @excrybaby. Bot Name Inspired From 'JoJo'."
+         text += "\n\nOwner Of A Bot. Queen Of @greyyvbss. Bot Name Inspired From 'JoJo'."
          disaster_level_present = True
 
     try:
@@ -444,15 +457,78 @@ def set_about_me(update: Update, context: CallbackContext):
             )
 
 @sudo_plus
-def stats(update: Update, context: CallbackContext):
-    stats = "<b>╔═━「 Current Nguyen Statistics 」</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
-    result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
-    result += "\n<b>╘═━「 Powered By Nguyen 」</b>"
-    update.effective_message.reply_text(
-        result,
-        parse_mode=ParseMode.HTML, 
-        disable_web_page_preview=True
-   )
+def stats(update, context):
+    db_size = SESSION.execute("SELECT pg_size_pretty(pg_database_size(current_database()))").scalar_one_or_none()
+    uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
+    botuptime = get_readable_time((time.time() - StartTime))
+    status = "╒═══「 *Zenitsu Robot Statistik Sistem*: 」\n\n"
+    status += f"• *Waktu Mulai*: {str(uptime)}" + "\n"
+    uname = platform.uname()
+    status += f"• *Sistem*: {str(uname.system)}" + "\n"
+    status += f"• *Rilis*: {escape_markdown(str(uname.release))}" + "\n"
+    status += f"• *Mesin*: {escape_markdown(str(uname.machine))}" + "\n"
+    mem = virtual_memory()
+    cpu = cpu_percent()
+    disk = disk_usage("/")
+    status += f"• *CPU*: {str(cpu)}" + " %\n"
+    status += f"• *RAM*: {str(mem[2])}" + " %\n"
+    status += f"• *Penyimpanan*: {str(disk[3])}" + " %\n"
+    status += f"• *Python version*: {python_version()}" + "\n"
+    kontol = [
+        [
+            InlineKeyboardButton(
+                text="Ping", callback_data="ping_kontol"
+            )
+        ]
+    ]
+    try:
+        update.effective_message.reply_text(status +
+            "\n📊 *Statistik Bot*:\n"
+            + "\n".join([mod.__stats__() for mod in STATS]) +
+            "\n\n╘══ 「Powered By: [Zenitsu Robot](https://t.me/ZeniitsuRobot) 」\n\n",
+        parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(kontol), disable_web_page_preview=True)
+    except BaseException:
+        update.effective_message.reply_text(
+            (
+                (
+                    (
+                        "\n📊 *Statistik Bot*:\n"
+                        + "\n".join(mod.__stats__() for mod in STATS)
+                    )
+                    + "\n\n📨 [ᴄʜᴀɴɴᴇʟ](https://t.me/zennih) | 📣 [sᴜᴘᴘᴏʀᴛ](https://t.me/ZennXSupport)\n\n"
+                )
+                + "╘══「 Powered By: [Zenitsu Robot](t.me/ZeniitsuRobot) 」\n"
+            ),
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(kontol),
+            disable_web_page_preview=True,
+        )
+
+
+def pingCallback(update: Update, context: CallbackContext):
+    query = update.callback_query
+    start_time = time.time()
+    bot = context.bot
+    chat = update.effective_chat
+    user = update.effective_user
+    requests.get("https://api.telegram.org")
+    end_time = time.time()
+    ping_time = round((end_time - start_time) * 1000, 3)
+    uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
+    botuptime = get_readable_time((time.time() - StartTime))
+    try:
+        if user.id not in DEV_USERS:
+            return bot.answer_callback_query(
+                query.id,
+                "Anda tidak memiliki akses untuk melakukan ini!.",
+                show_alert=True,
+            )
+    except BadRequest as excp:
+        if excp.message == "Chat_not_modified":
+            pass
+        else:
+            raise
+    query.answer(f"🏓 Pong! {ping_time}ms\n⏰ Waktu aktif: {botuptime}", show_alert=True)
         
         
 def about_bio(update: Update, context: CallbackContext):
@@ -576,6 +652,7 @@ GET_BIO_HANDLER = DisableAbleCommandHandler("bio", about_bio, run_async=True)
 
 STATS_HANDLER = CommandHandler(["stats", "statistics"], stats, run_async=True)
 ID_HANDLER = DisableAbleCommandHandler("id", get_id, run_async=True)
+PINGCB_HANDLER = CallbackQueryHandler(pingCallback, pattern=r"ping_kontol")
 GIFID_HANDLER = DisableAbleCommandHandler("gifid", gifid, run_async=True)
 INFO_HANDLER = DisableAbleCommandHandler("info", info, run_async=True)
 
@@ -586,6 +663,7 @@ dispatcher.add_handler(STATS_HANDLER)
 dispatcher.add_handler(ID_HANDLER)
 dispatcher.add_handler(GIFID_HANDLER)
 dispatcher.add_handler(INFO_HANDLER)
+dispatcher.add_handler(PINGCB_HANDLER)
 dispatcher.add_handler(SET_BIO_HANDLER)
 dispatcher.add_handler(GET_BIO_HANDLER)
 dispatcher.add_handler(SET_ABOUT_HANDLER)
