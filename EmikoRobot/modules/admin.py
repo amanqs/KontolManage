@@ -486,7 +486,7 @@ def refresh_admin(update, _):
     except KeyError:
         pass
 
-    update.effective_message.reply_text("✅ Admins cache refreshed!")
+    update.effective_message.reply_text("✅ *Admin List Updated*\n✅ *Bot Restarted!*")
 
 
 @connection_status
@@ -979,7 +979,7 @@ untuk memberikan notifikasi kepada pengguna
 ❂ /fullpromote*:* mempromosikan pengguna yang dibalas dengan hak penuh
 ❂ /demote*:* menurunkan pengguna yang dibalas
 ❂ /title <title here>*:* menetapkan judul khusus untuk admin yang dipromosikan bot
-❂ /admincache*:* paksa refresh daftar admin
+❂ /reload*:* paksa refresh daftar admin
 ❂ /del*:* menghapus pesan yang Anda balas
 ❂ /purge*:* menghapus semua pesan antara ini dan pesan yang dibalas.
 ❂ /purge <integer X>*:* menghapus pesan yang dibalas, dan X pesan yang mengikutinya jika membalas pesan.
@@ -1014,7 +1014,7 @@ LOW_PROMOTE_HANDLER = DisableAbleCommandHandler("lowpromote", lowpromote, run_as
 DEMOTE_HANDLER = DisableAbleCommandHandler("demote", demote, run_async=True)
 
 SET_TITLE_HANDLER = CommandHandler("title", set_title, run_async=True)
-ADMIN_REFRESH_HANDLER = CommandHandler("admincache", refresh_admin, filters=Filters.chat_type.groups, run_async=True)
+ADMIN_REFRESH_HANDLER = CommandHandler("reload", refresh_admin, filters=Filters.chat_type.groups, run_async=True)
 
 dispatcher.add_handler(SET_DESC_HANDLER)
 dispatcher.add_handler(SET_STICKER_HANDLER)
@@ -1048,7 +1048,7 @@ __command_list__ = [
     "fullpromote",
     "lowpromote",
     "demote", 
-    "admincache"
+    "reload"
 ]
 __handlers__ = [
     SET_DESC_HANDLER,
