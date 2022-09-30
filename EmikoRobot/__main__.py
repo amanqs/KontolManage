@@ -84,44 +84,38 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*ᴄʜᴇᴇʀs {} 🍺*
-ɴᴀɴᴅᴀᴘᴇᴅɪᴀ ʙᴏᴛ ʏᴀɴɢ ᴘᴀʟɪɴɢ sᴜᴘᴇʀ ʟᴇɴɢᴋᴀᴘ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴀɴᴛᴜᴍᴜ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴏᴜᴘ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ʟᴇʙɪʜ ᴍᴜᴅᴀʜ, ɴʏᴀᴍᴀɴ, & ᴀᴍᴀɴ. [✨](https://telegra.ph/file/3ad1cb99f3afb63ed25ea.jpg)
+*👋🏻 ʜᴇʟʟᴏ {} *
+ᴍʏ ɴᴀᴍᴇ ɪꜱ ᴢᴇɴɪᴛꜱᴜ [✨](https://telegra.ph/file/f268a324304deaa0f0180.jpg)
+ᴍᴇ ɪꜱ ᴀ ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ + ᴍᴜꜱɪᴄ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴡᴇʟʟ.
 ──────────────────────
 × `{}` *ᴜꜱᴇʀꜱ, ᴀᴄʀᴏꜱꜱ* `{}` *ᴄʜᴀᴛꜱ.*
 ──────────────────────
--𝙀𝙓𝙋𝙀𝘾𝙏 𝙈𝙊𝙍𝙀, 𝙋𝘼𝙔 𝙇𝙀𝙎𝙎-
-sᴛᴏʀᴇ : @nandapedia
-ᴏʀᴅᴇʀ : @tokonandapedia
-ғᴏᴜɴᴅᴇʀ : @chisatoananda
-
 ᴛᴇᴋᴀɴ /help ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴅᴀꜰᴛᴀʀ ᴘᴇʀɪɴᴛᴀʜ ʏᴀɴɢ ᴛᴇʀꜱᴇᴅɪᴀ.
 """
 
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ɴᴀɴᴅᴀᴘᴇᴅɪᴀ ➕️", url="t.me/NandaPediaBot?startgroup=true"
+            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴢᴇɴɪᴛꜱᴜ ➕️", url="t.me/ZeniitsuRobot?startgroup=true"
         ),
     ],
     [
-        InlineKeyboardButton(text="ɪɴꜱᴛᴀɢʀᴀᴍ", url="https://instagram.com/maestrocreation"
+        InlineKeyboardButton(text="💌 ɢʀᴏᴜᴘ", url="t.me/ZennXSupport
         ),
         InlineKeyboardButton(
-            text="ᴄʜᴀɴɴᴇʟ", url="t.me/nandapedia"
+            text="📣 ᴄʜᴀɴɴᴇʟ", url="t.me/zennih"
         ),
     ],
     [
-        InlineKeyboardButton(text="ʙᴀɴᴛᴜᴀɴ", callback_data="emiko_support"
+        InlineKeyboardButton(text="❓ ʙᴀɴᴛᴜᴀɴ", callback_data="emiko_support"
        ),
-        InlineKeyboardButton(
-            text="ᴅɪʀᴇᴋᴛᴜʀ", url="t.me/tokonandapedia"
-       ),
+
     ],
 ]
 
 
 HELP_STRINGS = """
-Klik tombol di bawah ini untuk mendapatkan deskripsi tentang fitur manage bot NandaPedia."""
+Klik tombol di bawah ini untuk mendapatkan deskripsi tentang fitur manage bot Zenitsu."""
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
@@ -372,7 +366,7 @@ def emiko_about_callback(update, context):
     if query.data == "emiko_":
         query.message.edit_text(
             text="🎧 Bantuan Perintah Music."
-            "\npilih menu di bawah ini untuk melihat bantuan Music Nanda Pedia ",
+            "\npilih menu di bawah ini untuk melihat bantuan Music Zenitsu ",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -451,8 +445,8 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*Bantuan Perintah Nanda Pedia* [📝](https://telegra.ph/file/709ca8028b63d5fbfefbb.jpg)"
-            "\npilih tombol dibawah untuk melihat bantuan perintah Nanda Pedia.",
+            text="*Bantuan Perintah Zenitsu* [📝](https://telegra.ph/file/c314892ca1b406871138a.jpg)"
+            "\npilih tombol dibawah untuk melihat bantuan perintah Zenitsu",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
