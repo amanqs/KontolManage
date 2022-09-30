@@ -1,5 +1,5 @@
 {
-      "name": "Nanda Robot",
+      "name": "Zenitsu",
       "description": "A Powerful  Telegram group management bot with anime theme.",
       "keywords": [
          "telegram",
@@ -9,8 +9,8 @@
          "naorobot"
       ],
     
-   "logo":    "https://telegra.ph/file/709ca8028b63d5fbfefbb.jpg",  
-   "repository": "https://github.com/CilikProject/NandaPedia",
+   "logo":    "https://telegra.ph/file/f268a324304deaa0f0180.jpg",  
+   "repository": "https://github.com/CilikProject/Zenitsu",
    "addons": [
           {
          "options": {
