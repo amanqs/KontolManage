@@ -85,7 +85,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *👋🏻 ʜᴇʟʟᴏ {} *
-ᴍʏ ɴᴀᴍᴇ ɪꜱ ᴢᴇɴɪᴛꜱᴜ [✨](https://telegra.ph/file/f268a324304deaa0f0180.jpg)
+ᴍʏ ɴᴀᴍᴇ ɪꜱ ᴊ ʀᴏʙᴏᴛ [✨](https://telegra.ph/file/912e5a7fc393586e6bf70.jpg)
 ᴍᴇ ɪꜱ ᴀ ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ + ᴍᴜꜱɪᴄ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴡᴇʟʟ.
 ──────────────────────
 × `{}` *ᴜꜱᴇʀꜱ, ᴀᴄʀᴏꜱꜱ* `{}` *ᴄʜᴀᴛꜱ.*
@@ -96,14 +96,14 @@ PM_START_TEXT = """
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴢᴇɴɪᴛꜱᴜ ➕️", url="t.me/ZeniitsuRobot?startgroup=true"
+            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴊ ʀᴏʙᴏᴛ ➕️", url="t.me/Jmusiccc_bot?startgroup=true"
         ),
     ],
     [
-        InlineKeyboardButton(text="💌 ɢʀᴏᴜᴘ", url="t.me/ZennXSupport
+        InlineKeyboardButton(text="💌 ɢʀᴏᴜᴘ", url="t.me/jrssssupport"
         ),
         InlineKeyboardButton(
-            text="📣 ᴄʜᴀɴɴᴇʟ", url="t.me/zennih"
+            text="📣 ᴄʜᴀɴɴᴇʟ", url="t.me/storyjarsss"
         ),
     ],
     [
@@ -115,7 +115,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-Klik tombol di bawah ini untuk mendapatkan deskripsi tentang fitur manage bot Zenitsu."""
+Klik tombol di bawah ini untuk mendapatkan deskripsi tentang fitur manage bot J Robot."""
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
@@ -366,7 +366,7 @@ def emiko_about_callback(update, context):
     if query.data == "emiko_":
         query.message.edit_text(
             text="🎧 Bantuan Perintah Music."
-            "\npilih menu di bawah ini untuk melihat bantuan Music Zenitsu ",
+            "\npilih menu di bawah ini untuk melihat bantuan Music J Robot ",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -445,8 +445,8 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*Bantuan Perintah Zenitsu* [📝](https://telegra.ph/file/c314892ca1b406871138a.jpg)"
-            "\npilih tombol dibawah untuk melihat bantuan perintah Zenitsu",
+            text="*Bantuan Perintah J Robot* [📝]https://telegra.ph/file/03db54f3e039f3cb710fb.jpg)"
+            "\npilih tombol dibawah untuk melihat bantuan perintah J Robot",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
