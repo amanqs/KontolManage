@@ -486,7 +486,7 @@ def refresh_admin(update, _):
     except KeyError:
         pass
 
-    update.effective_message.reply_text("✅ *Admin List Updated*\n✅ *Bot Restarted!*")
+    update.effective_message.reply_text("✅ **Admin List Updated**\n✅ **Bot Restarted!**")
 
 
 @connection_status
