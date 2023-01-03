@@ -115,7 +115,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-Klik tombol di bawah ini untuk mendapatkan deskripsi tentang fitur manage bot J Robot."""
+Klik tombol di bawah ini untuk mendapatkan deskripsi tentang fitur manage Bot Clay."""
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
