@@ -366,7 +366,7 @@ def emiko_about_callback(update, context):
     if query.data == "emiko_":
         query.message.edit_text(
             text="🎧 Bantuan Perintah Music."
-            "\npilih menu di bawah ini untuk melihat bantuan Music J Robot ",
+            "\npilih menu di bawah ini untuk melihat bantuan Music Clay Bot",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
