@@ -85,7 +85,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *👋🏻 ʜᴇʟʟᴏ {} *
-ᴍʏ ɴᴀᴍᴇ ɪꜱ ᴊ ʀᴏʙᴏᴛ [✨](https://telegra.ph/file/912e5a7fc393586e6bf70.jpg)
+ᴍʏ ɴᴀᴍᴇ ɪꜱ ʙᴀʙᴜ ᴄʟᴀʏ [✨](https://telegra.ph/file/8a25a0ed0b2f097056720.jpg)
 ᴍᴇ ɪꜱ ᴀ ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ + ᴍᴜꜱɪᴄ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴡᴇʟʟ.
 ──────────────────────
 × `{}` *ᴜꜱᴇʀꜱ, ᴀᴄʀᴏꜱꜱ* `{}` *ᴄʜᴀᴛꜱ.*
@@ -96,14 +96,14 @@ PM_START_TEXT = """
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴊ ʀᴏʙᴏᴛ ➕️", url="t.me/Jmusiccc_bot?startgroup=true"
+            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʀᴜᴘ ➕️", url="t.me/babuclaybot.?startgroup=true"
         ),
     ],
     [
-        InlineKeyboardButton(text="💌 ɢʀᴏᴜᴘ", url="t.me/jrssssupport"
+        InlineKeyboardButton(text="💌 ɢʀᴏᴜᴘ", url="t.me/gatchorparty"
         ),
         InlineKeyboardButton(
-            text="📣 ᴄʜᴀɴɴᴇʟ", url="t.me/storyjarsss"
+            text="📣 ᴄʜᴀɴɴᴇʟ", url="t.me/diarygatchor"
         ),
     ],
     [
@@ -445,8 +445,8 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*Bantuan Perintah J Robot* [📝]https://telegra.ph/file/03db54f3e039f3cb710fb.jpg)"
-            "\npilih tombol dibawah untuk melihat bantuan perintah J Robot",
+            text="*Bantuan Perintah Babu Clay* [📝](https://telegra.ph/file/acf94791e0c078c8794c2.jpg)"
+            "\npilih tombol dibawah untuk melihat bantuan perintah Babu Clay",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
