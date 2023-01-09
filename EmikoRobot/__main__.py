@@ -85,8 +85,8 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *👋🏻 ʜᴇʟʟᴏ {} *
-ᴍʏ ɴᴀᴍᴇ ɪꜱ ʙᴀʙᴜ ᴄʟᴀʏ [✨](https://telegra.ph/file/8a25a0ed0b2f097056720.jpg)
-ᴍᴇ ɪꜱ ᴀ ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ + ᴍᴜꜱɪᴄ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴡᴇʟʟ.
+ɪɴᴅᴏ ᴍᴜꜱɪᴄ ʙᴏᴛ [✨](https://telegra.ph/file/32b62dd73efb28be41fb7.jpg)
+ꜱᴀʏᴀ ᴀᴅᴀʟᴀʜ ʙᴏᴛ ᴍᴀɴᴀɢᴇ + ᴍᴜꜱɪᴄ ʏᴀɴɢ ᴀᴋᴀɴ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴍᴜ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ.
 ──────────────────────
 × `{}` *ᴜꜱᴇʀꜱ, ᴀᴄʀᴏꜱꜱ* `{}` *ᴄʜᴀᴛꜱ.*
 ──────────────────────
@@ -445,7 +445,7 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*Bantuan Perintah Babu Clay* [📝](https://telegra.ph/file/acf94791e0c078c8794c2.jpg)"
+            text="*Bantuan Perintah Babu Clay* [📝](https://telegra.ph/file/d0499a67b36f8d5f8a429.jpg)"
             "\npilih tombol dibawah untuk melihat bantuan perintah Babu Clay",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
