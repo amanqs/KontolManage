@@ -96,14 +96,14 @@ PM_START_TEXT = """
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʀᴜᴘ ➕️", url="t.me/babuclaybot?startgroup=true"
+            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʀᴜᴘ ➕️", url="t.me/indomusic_bot?startgroup=true"
         ),
     ],
     [
-        InlineKeyboardButton(text="💌 ɢʀᴏᴜᴘ", url="t.me/gatchorparty"
+        InlineKeyboardButton(text="💌 ɢʀᴏᴜᴘ", url="t.me/virtualindoaja"
         ),
         InlineKeyboardButton(
-            text="📣 ᴄʜᴀɴɴᴇʟ", url="t.me/diarygatchor"
+            text="📣 ᴄʜᴀɴɴᴇʟ", url="t.me/virtualinaja"
         ),
     ],
     [
@@ -115,7 +115,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-Klik tombol di bawah ini untuk mendapatkan deskripsi tentang fitur manage Bot Clay."""
+Klik tombol di bawah ini untuk mendapatkan deskripsi tentang fitur manage Bot Indo Music."""
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
@@ -366,7 +366,7 @@ def emiko_about_callback(update, context):
     if query.data == "emiko_":
         query.message.edit_text(
             text="🎧 Bantuan Perintah Music."
-            "\npilih menu di bawah ini untuk melihat bantuan Music Clay Bot",
+            "\npilih menu di bawah ini untuk melihat bantuan Indo Music Bot",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -445,8 +445,8 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*Bantuan Perintah Babu Clay* [📝](https://telegra.ph/file/d0499a67b36f8d5f8a429.jpg)"
-            "\npilih tombol dibawah untuk melihat bantuan perintah Babu Clay",
+            text="*Bantuan Perintah Indo Music Bot* [📝](https://telegra.ph/file/d0499a67b36f8d5f8a429.jpg)"
+            "\npilih tombol dibawah untuk melihat bantuan perintah Indo Music Bot",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
