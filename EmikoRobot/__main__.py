@@ -85,7 +85,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *👋🏻 ʜᴇʟʟᴏ {} *
-ɪɴᴅᴏ ᴍᴜꜱɪᴄ ʙᴏᴛ [✨](https://telegra.ph/file/32b62dd73efb28be41fb7.jpg)
+ꜱᴀʏᴀ ᴍɪxᴜᴇ ʙᴏᴛ
 ꜱᴀʏᴀ ᴀᴅᴀʟᴀʜ ʙᴏᴛ ᴍᴀɴᴀɢᴇ + ᴍᴜꜱɪᴄ ʏᴀɴɢ ᴀᴋᴀɴ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴍᴜ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ.
 ──────────────────────
 × `{}` *ᴜꜱᴇʀꜱ, ᴀᴄʀᴏꜱꜱ* `{}` *ᴄʜᴀᴛꜱ.*
@@ -96,14 +96,14 @@ PM_START_TEXT = """
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʀᴜᴘ ➕️", url="t.me/indomusic_bot?startgroup=true"
+            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʀᴜᴘ ➕️", url="https://t.me/mixuetapibot?startgroup=true"
         ),
     ],
     [
-        InlineKeyboardButton(text="💌 ɢʀᴏᴜᴘ", url="t.me/virtualindoaja"
+        InlineKeyboardButton(text="💌 ɢʀᴏᴜᴘ", url="t.me/amangsupportgrup"
         ),
         InlineKeyboardButton(
-            text="📣 ᴄʜᴀɴɴᴇʟ", url="t.me/virtualinaja"
+            text="📣 ᴄʜᴀɴɴᴇʟ", url="t.me/amwangs"
         ),
     ],
     [
@@ -115,7 +115,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-Klik tombol di bawah ini untuk mendapatkan deskripsi tentang fitur manage Bot Indo Music."""
+Klik tombol di bawah ini untuk mendapatkan deskripsi tentang fitur manage Mixue bot."""
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
@@ -366,7 +366,7 @@ def emiko_about_callback(update, context):
     if query.data == "emiko_":
         query.message.edit_text(
             text="🎧 Bantuan Perintah Music."
-            "\npilih menu di bawah ini untuk melihat bantuan Indo Music Bot",
+            "\npilih menu di bawah ini untuk melihat bantuan Mixue Music Bot",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -445,7 +445,7 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*Bantuan Perintah Indo Music Bot* [📝](https://telegra.ph/file/d0499a67b36f8d5f8a429.jpg)"
+            text="*Bantuan Perintah Mixue Bot* [📝](https://telegra.ph/file/8f7ab0e63954ab71e5518.jpg)"
             "\npilih tombol dibawah untuk melihat bantuan perintah Indo Music Bot",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
