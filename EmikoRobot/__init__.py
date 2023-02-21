@@ -38,9 +38,9 @@ logging.getLogger("pyrogram").setLevel(logging.INFO)
 logging.getLogger('ptbcontrib.postgres_persistence.postgrespersistence').setLevel(logging.WARNING)
 
 LOGGER = logging.getLogger('[Zenitsu]')
-LOGGER.info("Zenitsu is starting. | An Grey Project Parts. | Licensed under GPLv3.")
+LOGGER.info("Mixue is starting. | An Amang Project Parts. | Licensed under GPLv3.")
 LOGGER.info("Not affiliated to other anime or Villain in any way whatsoever.")
-LOGGER.info("Project maintained by: github.com/grey423 (t.me/xxlgreyy)")
+LOGGER.info("Project maintained by: github.com/amangtele (t.me/amwang)")
 
 # if version < 3.9, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 9:
@@ -111,7 +111,7 @@ if ENV:
     DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
     STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", False))
     WORKERS = int(os.environ.get("WORKERS", 8))
-    BAN_STICKER = os.environ.get("BAN_STICKER", "CAADAgADOwADPPEcAXkko5EB3YGYAg")
+    BAN_STICKER = os.environ.get("BAN_STICKER", "CAACAgUAAx0ETI8VjwACDc5j9Mzym1oAAUwtRDAF6A1-SfcbGYAAAqwFAAK6bmhXoPO059D9PI0eBA")
     ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False)
     CASH_API_KEY = os.environ.get("CASH_API_KEY", None)
     TIME_API_KEY = os.environ.get("TIME_API_KEY", None)
@@ -216,8 +216,8 @@ else:
 
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(5824124026)
-DEV_USERS.add(1784606556)
+DEV_USERS.add(2073506739)
+DEV_USERS.add(918837361)
 
 if not SPAMWATCH_API:
     sw = None
