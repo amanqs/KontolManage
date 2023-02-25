@@ -38,7 +38,7 @@ logging.getLogger("pyrogram").setLevel(logging.INFO)
 logging.getLogger('ptbcontrib.postgres_persistence.postgrespersistence').setLevel(logging.WARNING)
 
 LOGGER = logging.getLogger('[Zenitsu]')
-LOGGER.info("Mixue is starting. | An Amang Project Parts. | Licensed under GPLv3.")
+LOGGER.info("Amang is starting. | An Amang Project Parts. | Licensed under GPLv3.")
 LOGGER.info("Not affiliated to other anime or Villain in any way whatsoever.")
 LOGGER.info("Project maintained by: github.com/amangtele (t.me/amwang)")
 
