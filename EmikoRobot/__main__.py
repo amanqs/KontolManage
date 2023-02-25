@@ -85,29 +85,29 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *👋🏻 ʜᴇʟʟᴏ {} *
-ꜱᴀʏᴀ ᴍɪxᴜᴇ ʙᴏᴛ
-ꜱᴀʏᴀ ᴀᴅᴀʟᴀʜ ʙᴏᴛ ᴍᴀɴᴀɢᴇ + ᴍᴜꜱɪᴄ ʏᴀɴɢ ᴀᴋᴀɴ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴍᴜ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ.
-──────────────────────
+❍ AmangRobot is a bot manager + music to manage your group well.
+❍ Press /help for Help.
+❍ Managed By @amwang.
+────────────────────
 × `{}` *ᴜꜱᴇʀꜱ, ᴀᴄʀᴏꜱꜱ* `{}` *ᴄʜᴀᴛꜱ.*
-──────────────────────
-ᴛᴇᴋᴀɴ /help ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴅᴀꜰᴛᴀʀ ᴘᴇʀɪɴᴛᴀʜ ʏᴀɴɢ ᴛᴇʀꜱᴇᴅɪᴀ.
+────────────────────
 """
 
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʀᴜᴘ ➕️", url="https://t.me/mixuetapibot?startgroup=true"
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="💌 ɢʀᴏᴜᴘ", url="t.me/amangsupportgrup"
-        ),
-        InlineKeyboardButton(
-            text="📣 ᴄʜᴀɴɴᴇʟ", url="t.me/amwangs"
+            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʀᴜᴘ ➕️", url="https://t.me/AmangRobot_bot?startgroup=true"
         ),
     ],
     [
         InlineKeyboardButton(text="❓ ʙᴀɴᴛᴜᴀɴ", callback_data="emiko_support"
+        ),
+        InlineKeyboardButton(
+            text="📣 ꜱᴜᴘᴘᴏʀᴛ", url="t.me/amangsupportgrup"
+        ),
+    ],
+    [
+        InlineKeyboardButton(text="☕️ ᴅᴏɴᴀꜱɪ", url="https://t.me/amwangstore/52"
        ),
 
     ],
@@ -115,7 +115,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-Klik tombol di bawah ini untuk mendapatkan deskripsi tentang fitur manage Mixue bot."""
+Klik tombol di bawah ini untuk mendapatkan deskripsi tentang fitur manage Amang Robot."""
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
@@ -366,7 +366,7 @@ def emiko_about_callback(update, context):
     if query.data == "emiko_":
         query.message.edit_text(
             text="🎧 Bantuan Perintah Music."
-            "\npilih menu di bawah ini untuk melihat bantuan Mixue Music Bot",
+            "\npilih menu di bawah ini untuk melihat bantuan Amang Robot",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -445,8 +445,8 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*Bantuan Perintah Mixue Bot* [📝](https://telegra.ph/file/8f7ab0e63954ab71e5518.jpg)"
-            "\npilih tombol dibawah untuk melihat bantuan perintah Indo Music Bot",
+            text="*Bantuan Perintah AmangRobot*)"
+            "\npilih tombol dibawah untuk melihat bantuan perintah AmangRobot",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
