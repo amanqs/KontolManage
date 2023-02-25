@@ -461,7 +461,7 @@ def stats(update, context):
     db_size = SESSION.execute("SELECT pg_size_pretty(pg_database_size(current_database()))").scalar_one_or_none()
     uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
     botuptime = get_readable_time((time.time() - StartTime))
-    status = "╒═══「 *Mixue Bot Statistik Sistem*: 」\n\n"
+    status = "╒═══「 *AmangRobot Memeg Sistem*: 」\n\n"
     status += f"• *Waktu Mulai*: {str(uptime)}" + "\n"
     uname = platform.uname()
     status += f"• *Sistem*: {str(uname.system)}" + "\n"
@@ -485,7 +485,7 @@ def stats(update, context):
         update.effective_message.reply_text(status +
             "\n📊 *Statistik Bot*:\n"
             + "\n".join([mod.__stats__() for mod in STATS]) +
-            "\n\n╘══ 「Powered By: [Mixue](https://t.me/mixuetapibot) 」\n\n",
+            "\n\n╘══ 「Powered By: [AmangRobot](https://t.me/AmangRobot_bot) 」\n\n",
         parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(kontol), disable_web_page_preview=True)
     except BaseException:
         update.effective_message.reply_text(
