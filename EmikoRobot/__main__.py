@@ -111,7 +111,7 @@ buttons = [
         InlineKeyboardButton(text="Donasi ☕️", url="https://t.me/amwangstore/52"
        ),
         InlineKeyboardButton(text="Gban Logs 🔫", url="https://t.me/gbanamang"
-
+       ),
     ],
 ]
 
