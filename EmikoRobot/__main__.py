@@ -89,26 +89,28 @@ PM_START_TEXT = """
 ❍ Press /help for Help.
 ❍ Managed By @amwang.
 ────────────────────
-× `{}` *ᴜꜱᴇʀꜱ, ᴀᴄʀᴏꜱꜱ* `{}` *ᴄʜᴀᴛꜱ.*
+🧸 Users ⋙ `1059236` Users
+📮 Groups ⋙ `15698` Groups
 ────────────────────
 """
 
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʀᴜᴘ ➕️", url="https://t.me/AmangRobot_bot?startgroup=true"
+            text="➕️ Tambahkan Saya Ke Grup ➕️", url="https://t.me/AmangRobot_bot?startgroup=true"
         ),
     ],
     [
-        InlineKeyboardButton(text="❓ ʙᴀɴᴛᴜᴀɴ", callback_data="emiko_support"
+        InlineKeyboardButton(text="Bantuan ❓", callback_data="emiko_support"
         ),
         InlineKeyboardButton(
-            text="📣 ꜱᴜᴘᴘᴏʀᴛ", url="t.me/amangsupportgrup"
+            text="Support 📣", url="t.me/amangsupportgrup"
         ),
     ],
     [
-        InlineKeyboardButton(text="☕️ ᴅᴏɴᴀꜱɪ", url="https://t.me/amwangstore/52"
+        InlineKeyboardButton(text="Donasi ☕️", url="https://t.me/amwangstore/52"
        ),
+        InlineKeyboardButton(text="Gban Logs 🔫", url="https://t.me/gbanamang"
 
     ],
 ]
