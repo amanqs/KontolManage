@@ -506,9 +506,12 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="👨‍💻 ᴀᴍᴀɴɢ•", url="tg://openmessage?user_id=2073506739"),
-                    InlineKeyboardButton(text="💳 ϙʀɪs", url="https://te.legra.ph/file/20897710ec3f3594d354d.jpg"),
+                    InlineKeyboardButton(text="📝 Qʀɪꜱ", url="https://te.legra.ph/file/20897710ec3f3594d354d.jpg"),
+                    InlineKeyboardButton(text="💳 ᴘᴇᴍʙᴀʏᴀʀᴀɴ ʟᴀɪɴ", url="https://t.me/amwangstore/52"),
                  ],
+                  [
+                    InlineKeyboardButton(text="👨‍💻 ᴀᴍᴀɴɢ•", url="https://t.me/amwang"),
+                  ],
                  [
                     InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),                 
                  ],
