@@ -108,7 +108,7 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="Donasi ☕️", callback_data="dam_ganteng"
+        InlineKeyboardButton(text="Donasi ☕️", callback_data="emiko_own"
        ),
         InlineKeyboardButton(text="Jasa Bot 🚀", callback_data="emiko_jasa"
        ),
@@ -497,7 +497,7 @@ def emiko_about_callback(update, context):
         )
 
 
-    elif query.data == "dam_ganteng":
+    elif query.data == "emiko_own":
         query.message.edit_text(
             text="*ᴊɪᴋᴀ ᴋᴀʟɪᴀɴ ᴍᴇɴʏᴜᴋᴀɪ ᴀᴍᴀɴɢ ʀᴏʙᴏᴛ ᴅᴀɴ ɪɴɢɪɴ ʙᴇʀᴅᴏɴᴀsɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴀɴᴛᴜ ᴀɢᴀʀ ᴀᴍᴀɴɢ ʀᴏʙᴏᴛ ᴛᴇᴛᴀᴘ ᴀᴋᴛɪғ ᴛᴇʀᴜs.*"
             f"\n\n➻ *ᴋᴀʟɪᴀɴ ʙɪsᴀ ʙᴇʀᴅᴏɴᴀsɪ ᴅᴇɴɢᴀɴ ᴠɪᴀ ᴅᴀɴᴀ/ϙʀɪs ᴀᴛᴀᴜ ᴋᴀʟɪᴀɴ ʙɪsᴀ ʜᴜʙᴜɴɢɪ ᴏᴡɴᴇʀ ᴅɪʙᴀᴡᴀʜ ɪɴɪ*"
@@ -510,7 +510,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="💳 ϙʀɪs", url="https://te.legra.ph/file/20897710ec3f3594d354d.jpg"),
                  ],
                  [
-                    InlineKeyboardButton(text="« ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),                 
+                    InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),                 
                  ],
                 ]
             ),
