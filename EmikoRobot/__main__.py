@@ -108,9 +108,9 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="Donasi ☕️", url="https://t.me/amwangstore/52"
+        InlineKeyboardButton(text="Donasi ☕️", callback_data="dam_ganteng"
        ),
-        InlineKeyboardButton(text="Gban Logs 🔫", url="https://t.me/gbanamang"
+        InlineKeyboardButton(text="Jasa Bot 🚀", callback_data="emiko_jasa"
        ),
     ],
 ]
@@ -430,6 +430,38 @@ def emiko_about_callback(update, context):
                 [[InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_")]]
             ),
         )
+    elif query.data == "emiko_jasa":
+        query.message.edit_text(
+            text="*𝙅𝘼𝙎𝘼 𝘿𝙀𝙋𝙇𝙊𝙔 𝘽𝙊𝙏 𝙏𝙀𝙇𝙀𝙂𝙍𝘼𝙈*"
+            "\n\n*➻ 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 𝙂𝘾𝘼𝙎𝙏*"
+            "\n├ *Rp. 40.000 [ Bulanan Userbot Ultroid ]*"
+            "\n├ *Rp. 30.000 [ Ultra-Premium ]*"
+            "\n└ *Sistem Terima Jadi*"
+            "\n\n*➻ 𝘽𝙊𝙏 𝙈𝙐𝙎𝙄𝙆*"
+            "\n├ *Rp. 100.000 [ Vps/bulan ]*"
+            "\n├ *[ Awalan Pasang ]*"
+            "\n└ *Sistem Terima Jadi*"
+            "\n\n*➻ 𝘽𝙊𝙏 𝙈𝙐𝙎𝙄𝙆 & 𝙈𝘼𝙉𝘼𝙂𝙀*"
+            "\n├ *Rp. 10.000 [ Clone GH ]*"
+            "\n├ *Rp. 250.000 [ Deploy + Heroku + Vps ]*"
+            "\n└ *Sistem Terima Jadi*"
+            "\n\n*➻ 𝘽𝙊𝙏 𝙈𝘼𝙉𝘼𝙂𝙀*"
+            "\n├ *Rp. 80.000 [ Heroku ]*"
+            "\n└ *Sistem Terima Jadi*"
+            "\n\n*➻ Catatan*"
+            "\n\n*➻ 𝘼𝙋𝘼𝘽𝙄𝙇𝘼 𝘽𝙊𝙏 𝙔𝘼𝙉𝙂 𝘼𝙉𝘿𝘼 𝙄𝙉𝙂𝙄𝙉𝙆𝘼𝙉 𝙏𝙞𝙙𝙖𝙠 𝙖𝙙𝙖 𝙨𝙞𝙡𝙖𝙝𝙠𝙖𝙣 𝙗𝙚𝙧𝙩𝙖𝙣𝙮𝙖 𝙠𝙚* [ᴀᴍᴀɴɢ](tg://openmessage?user_id=2073506739)"
+            "\n\n*➻ ʜᴇʀᴏᴋᴜ ʀᴀᴡᴀɴ sᴜsᴘᴇɴ ᴊᴀᴅɪ sᴀʏᴀ ᴅᴇᴘʟᴏʏ ᴅɪ ᴠᴘs.*"
+            "\n\n*➻ sɪʟᴀʜᴋᴀɴ ʜᴜʙᴜɴɢɪ* [ᴀᴍᴀɴɢ](tg://openmessage?user_id=2073506739) *ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ/ᴍᴇɴᴀɴʏᴀᴋᴀɴ ᴄᴏɴᴛᴏʜ ʙᴏᴛ*"
+            "\n\n*𝗦𝗘𝗞𝗜𝗔𝗡 𝗧𝗘𝗥𝗜𝗠𝗔 𝗞𝗔𝗦𝗜𝗛 🙏.*",
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                  [
+                    InlineKeyboardButton(text="« ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),
+                  ]
+                ]
+            ),
+        )
     elif query.data == "emiko_notes":
         query.message.edit_text(
             text="🤖 PERINTAH BOT"
@@ -465,6 +497,24 @@ def emiko_about_callback(update, context):
         )
 
 
+    elif query.data == "dam_ganteng":
+        query.message.edit_text(
+            text="*ᴊɪᴋᴀ ᴋᴀʟɪᴀɴ ᴍᴇɴʏᴜᴋᴀɪ ᴀᴍᴀɴɢ ʀᴏʙᴏᴛ ᴅᴀɴ ɪɴɢɪɴ ʙᴇʀᴅᴏɴᴀsɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴀɴᴛᴜ ᴀɢᴀʀ ᴀᴍᴀɴɢ ʀᴏʙᴏᴛ ᴛᴇᴛᴀᴘ ᴀᴋᴛɪғ ᴛᴇʀᴜs.*"
+            f"\n\n➻ *ᴋᴀʟɪᴀɴ ʙɪsᴀ ʙᴇʀᴅᴏɴᴀsɪ ᴅᴇɴɢᴀɴ ᴠɪᴀ ᴅᴀɴᴀ/ϙʀɪs ᴀᴛᴀᴜ ᴋᴀʟɪᴀɴ ʙɪsᴀ ʜᴜʙᴜɴɢɪ ᴏᴡɴᴇʀ ᴅɪʙᴀᴡᴀʜ ɪɴɪ*"
+            f"\n\n➻ *ᴅᴀɴ ᴜɴᴛᴜᴋ ʏᴀɴɢ sᴜᴅᴀʜ ʙᴇʀᴅᴏɴᴀsɪ sᴀʏᴀ ᴜᴄᴀᴘᴋᴀɴ ᴛᴇʀɪᴍᴀᴋᴀsɪʜ ʙᴀɴʏᴀᴋ* 🙏",
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="👨‍💻 ᴀᴍᴀɴɢ•", url="tg://openmessage?user_id=2073506739"),
+                    InlineKeyboardButton(text="💳 ϙʀɪs", url="https://te.legra.ph/file/20897710ec3f3594d354d.jpg"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="« ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),                 
+                 ],
+                ]
+            ),
+        )
     elif query.data == "emiko_credit":
         query.message.edit_text(
             text="⚒️ PERINTAH EKSTRA"
