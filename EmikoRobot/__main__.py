@@ -434,8 +434,8 @@ def emiko_about_callback(update, context):
         query.message.edit_text(
             text="*𝙅𝘼𝙎𝘼 𝘿𝙀𝙋𝙇𝙊𝙔 𝘽𝙊𝙏 𝙏𝙀𝙇𝙀𝙂𝙍𝘼𝙈*"
             "\n\n*➻ 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 𝙂𝘾𝘼𝙎𝙏*"
-            "\n├ *Rp. 40.000 [ Bulanan Userbot Ultroid ]*"
-            "\n├ *Rp. 30.000 [ Ultra-Premium ]*"
+            "\n├ *Rp. 20.000 [Ubot Premium ]*"
+            "\n├ *Rp. 25.000 [Tede Ultra-Premium ]*"
             "\n└ *Sistem Terima Jadi*"
             "\n\n*➻ 𝘽𝙊𝙏 𝙈𝙐𝙎𝙄𝙆*"
             "\n├ *Rp. 100.000 [ Vps/bulan ]*"
@@ -457,7 +457,7 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                    InlineKeyboardButton(text="« ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),
+                    InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),
                   ]
                 ]
             ),
