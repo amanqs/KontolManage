@@ -84,27 +84,26 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hai! {} *Nama saya Amang Robot. Saya dapat melakukan streaming 
-dan mengelola grup dengan banyak fitur berguna.
-
-If you need help?, please join [my support group(t.me/amangsupportgrup)].
-Managed By @amwang.
+ʜᴀɪ {} ɴᴀᴍᴀ sᴀʏᴀ ᴀᴍᴀɴɢ ʀᴏʙᴏᴛ.
+ꜱᴀʏᴀ ᴀᴅᴀʟᴀʜ ʙᴏᴛ ᴍᴀɴᴀɢᴇ + ᴍᴜꜱɪᴄ ʏᴀɴɢ ᴀᴋᴀɴ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴍᴜ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ.
 """
 
 buttons = [
         [
         InlineKeyboardButton(
-            text="Tambahkan Saya ➕️", url="https://t.me/AmangRobot_bot?startgroup=true"
+            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʀᴜᴘ ➕️", url="https://t.me/AmangRobot_bot?startgroup=true"
         ),
     ],
     [
-        InlineKeyboardButton(text="Bantuan ❓", callback_data="emiko_support"
+        InlineKeyboardButton(text="ʙᴀɴᴛᴜᴀɴ ❓", callback_data="emiko_support"
         ),
-        InlineKeyboardButton(text="Donasi ☕️", callback_data="emiko_own"
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ 📣", callback_data="emiko_support"
        ),
     ],
     [
-        InlineKeyboardButton(text="Jasa Bot 🚀", callback_data="emiko_jasa"
+        InlineKeyboardButton(text="ᴅᴏɴᴀsɪ ☕️", callback_data="emiko_own"
+       ),
+        InlineKeyboardButton(text="ᴊᴀsᴀ ʙᴏᴛ 🚀", callback_data="emiko_jasa"
        ),
     ],
 ]
@@ -489,7 +488,27 @@ def emiko_about_callback(update, context):
                 ]
             ),
         )
-
+        
+elif query.data == "emiko_support":
+        query.message.edit_text(
+            text="*Amang Support Chat*"
+            f"\n\n➻ *Bergabunglah dengan grup/channel di bawah ini, untuk Anda melaporkan/menanyakan jika ada masalah dengan Amang Robot*",
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="ɢʀᴜᴘ", url="https://t.me/amangsupportgrup"),
+                    InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url="https://t.me/amwangs"),
+                 ],
+                  [
+                    InlineKeyboardButton(text="👨‍💻 ᴀᴍᴀɴɢ•", url="https://t.me/amwang"),
+                  ],
+                 [
+                    InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),                 
+                 ],
+                ]
+            ),
+        )
 
     elif query.data == "emiko_own":
         query.message.edit_text(
