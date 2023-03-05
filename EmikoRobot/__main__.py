@@ -84,32 +84,25 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*👋🏻 ʜᴇʟʟᴏ {} *
-❍ AmangRobot is a bot manager + music to manage your group well.
-❍ Press /help for Help.
-❍ Managed By @amwang.
-────────────────────
-🧸 Users ⋙ `1059236` Users
-📮 Groups ⋙ `15698` Groups
-────────────────────
+*Hai! {} *Nama saya Amang Robot. Saya dapat melakukan streaming 
+dan mengelola grup dengan banyak fitur berguna.
+
+If you need help?, please join [my support group](https://t.me/amangsupportgrup
 """
 
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ Tambahkan Saya Ke Grup ➕️", url="https://t.me/AmangRobot_bot?startgroup=true"
+            text="Tambahkan Saya ➕️", url="https://t.me/AmangRobot_bot?startgroup=true"
         ),
     ],
     [
         InlineKeyboardButton(text="Bantuan ❓", callback_data="emiko_support"
         ),
-        InlineKeyboardButton(
-            text="Support 📣", url="t.me/amangsupportgrup"
-        ),
-    ],
-    [
         InlineKeyboardButton(text="Donasi ☕️", callback_data="emiko_own"
        ),
+    ],
+    [
         InlineKeyboardButton(text="Jasa Bot 🚀", callback_data="emiko_jasa"
        ),
     ],
@@ -466,7 +459,7 @@ def emiko_about_callback(update, context):
         query.message.edit_text(
             text="🤖 PERINTAH BOT"
             "\n\n • /stats - Dapatkan 10 Trek Global Stats Teratas, 10 Pengguna Bot Teratas, 10 Obrolan Teratas di bot, 10 Teratas Dimainkan dalam obrolan, dll."
-            "\n\n • /sudolist - Periksa Sudo Pengguna Nnda Music Bot,"
+            "\n\n • /sudolist - Periksa Sudo Pengguna Amang Music Bot,"
             "\n\n • /lyrics [Nama Musik] mencari Lirik untuk Musik tertentu di web."
             "\n\n • /song [Nama Trek] atau [Tautan YT] - Unduh trek apa pun dari youtube dalam format mp3 atau mp4."
             "\n\n • /player -  Dapatkan Panel Bermain interaktif."
@@ -506,14 +499,26 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="📝 Qʀɪꜱ", url="https://te.legra.ph/file/20897710ec3f3594d354d.jpg"),
+                    InlineKeyboardButton(text="📝 Qʀɪꜱ", callback_data="emiko_qris"),
                     InlineKeyboardButton(text="💳 ᴘᴇᴍʙᴀʏᴀʀᴀɴ ʟᴀɪɴ", url="https://t.me/amwangstore/52"),
                  ],
                   [
                     InlineKeyboardButton(text="👨‍💻 ᴀᴍᴀɴɢ•", url="https://t.me/amwang"),
                   ],
                  [
-                    InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),                 
+                    InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),                 
+                 ],
+                ]
+            ),
+        )
+        
+        elif query.data == "emiko_qris":
+        query.message.edit_text(
+            text="*ᴋᴀʟɪᴀɴ ʙɪsᴀ ʙᴇʀᴅᴏɴᴀsɪ ᴅᴇɴɢᴀɴ ᴠɪᴀ ϙʀɪs ᴅɪʙᴀᴡᴀʜ ɪɴɪ*[🗒](https://te.legra.ph/file/20897710ec3f3594d354d.jpg)"
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(
+                 [
+                    InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="emiko_back"),                 
                  ],
                 ]
             ),
@@ -522,11 +527,10 @@ def emiko_about_callback(update, context):
         query.message.edit_text(
             text="⚒️ PERINTAH EKSTRA"
             "\n\n✅Perintah Ekstra."
-            "\n\n • /mstart - Mulai Bot Musik."
-            "\n\n • /mhelp - Dapatkan Menu Pembantu Perintah dengan penjelasan rinci tentang perintah."
+            "\n\n • /xhelp - Dapatkan Menu Pembantu Perintah dengan penjelasan rinci tentang perintah."
             "\n\n • /mping- Ping Bot dan periksa statistik Ram, Cpu, dll dari Bot."
             "\n\n✅Pengaturan Music."
-            "\n • /msettings - Dapatkan pengaturan grup lengkap dengan tombol sebaris."
+            "\n • /settings atau /msettings - Dapatkan pengaturan grup lengkap dengan tombol sebaris."
             "\n\n🔗 Opsi di Pengaturan."
             "\n\n1️⃣ Kamu Bisa set ingin Kualitas Audio Anda streaming di obrolan suara."
             "\n\n2️⃣ You can set Kualitas Video Anda ingin streaming di obrolan suara."
