@@ -87,7 +87,7 @@ PM_START_TEXT = """
 *Hai! {} *Nama saya Amang Robot. Saya dapat melakukan streaming 
 dan mengelola grup dengan banyak fitur berguna.
 
-If you need help?, please join [my support group](https://t.me/amangsupportgrup)
+If you need help?, please join [my support group](t.me/amangsupportgrup)
 """
 
 buttons = [
@@ -499,7 +499,7 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="📝 Qʀɪꜱ", callback_data="emiko_qris"),
+                    InlineKeyboardButton(text="📝 Qʀɪꜱ", url="https://te.legra.ph/file/20897710ec3f3594d354d.jpg"),
                     InlineKeyboardButton(text="💳 ᴘᴇᴍʙᴀʏᴀʀᴀɴ ʟᴀɪɴ", url="https://t.me/amwangstore/52"),
                  ],
                   [
