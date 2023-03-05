@@ -97,7 +97,7 @@ buttons = [
     [
         InlineKeyboardButton(text="ʙᴀɴᴛᴜᴀɴ ❓", callback_data="emiko_support"
         ),
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ 📣", callback_data="emiko_support"
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ 📣", callback_data="emiko_supportchat"
        ),
     ],
     [
@@ -489,7 +489,7 @@ def emiko_about_callback(update, context):
             ),
         )
         
-elif query.data == "emiko_support":
+elif query.data == "emiko_supportchat":
         query.message.edit_text(
             text="*Amang Support Chat*"
             f"\n\n➻ *Bergabunglah dengan grup/channel di bawah ini, untuk Anda melaporkan/menanyakan jika ada masalah dengan Amang Robot*",
