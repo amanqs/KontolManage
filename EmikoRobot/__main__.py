@@ -512,7 +512,7 @@ def emiko_about_callback(update, context):
             ),
         )
         
-        elif query.data == "emiko_qris":
+    elif query.data == "emiko_qris":
         query.message.edit_text(
             text="*ᴋᴀʟɪᴀɴ ʙɪsᴀ ʙᴇʀᴅᴏɴᴀsɪ ᴅᴇɴɢᴀɴ ᴠɪᴀ ϙʀɪs ᴅɪʙᴀᴡᴀʜ ɪɴɪ*[🗒](https://te.legra.ph/file/20897710ec3f3594d354d.jpg)"
             parse_mode=ParseMode.MARKDOWN,
