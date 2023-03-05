@@ -87,7 +87,7 @@ PM_START_TEXT = """
 *Hai! {} *Nama saya Amang Robot. Saya dapat melakukan streaming 
 dan mengelola grup dengan banyak fitur berguna.
 
-If you need help?, please join [my support group](t.me/amangsupportgrup).
+If you need help?, please join [my support group(t.me/amangsupportgrup)].
 Managed By @amwang.
 """
 
