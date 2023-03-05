@@ -87,7 +87,7 @@ PM_START_TEXT = """
 *Hai! {} *Nama saya Amang Robot. Saya dapat melakukan streaming 
 dan mengelola grup dengan banyak fitur berguna.
 
-If you need help?, please join [my support group](https://t.me/amangsupportgrup
+If you need help?, please join [my support group](https://t.me/amangsupportgrup)
 """
 
 buttons = [
@@ -514,7 +514,8 @@ def emiko_about_callback(update, context):
         
     elif query.data == "emiko_qris":
         query.message.edit_text(
-            text="*ᴋᴀʟɪᴀɴ ʙɪsᴀ ʙᴇʀᴅᴏɴᴀsɪ ᴅᴇɴɢᴀɴ ᴠɪᴀ ϙʀɪs ᴅɪʙᴀᴡᴀʜ ɪɴɪ*[🗒](https://te.legra.ph/file/20897710ec3f3594d354d.jpg)",
+            text="*ᴋᴀʟɪᴀɴ ʙɪsᴀ ʙᴇʀᴅᴏɴᴀsɪ ᴅᴇɴɢᴀɴ ᴠɪᴀ ϙʀɪs ᴅɪʙᴀᴡᴀʜ ɪɴɪ*"
+            "[🗒](https://te.legra.ph/file/20897710ec3f3594d354d.jpg)"
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                  [
