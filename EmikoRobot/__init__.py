@@ -37,10 +37,10 @@ logging.basicConfig(
 logging.getLogger("pyrogram").setLevel(logging.INFO)
 logging.getLogger('ptbcontrib.postgres_persistence.postgrespersistence').setLevel(logging.WARNING)
 
-LOGGER = logging.getLogger('[Zenitsu]')
+LOGGER = logging.getLogger('[Amang]')
 LOGGER.info("Amang is starting. | An Amang Project Parts. | Licensed under GPLv3.")
 LOGGER.info("Not affiliated to other anime or Villain in any way whatsoever.")
-LOGGER.info("Project maintained by: github.com/amangtele (t.me/amwang)")
+LOGGER.info("Project maintained by: github.com/amanqs (t.me/amwang)")
 
 # if version < 3.9, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 9:
