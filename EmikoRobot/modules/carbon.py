@@ -30,9 +30,9 @@ MEMEK = "https://telegra.ph/file/1ef60441da2c164f64a3b.jpg"
 async def repo(_, message):
     await message.reply_photo(
         photo=MEMEK,
-        caption=f"""✨ **Hey I'm Zenitsu Robot** 
+        caption=f"""✨ **Hey I'm Amang Robot** 
 
-**Owner repo : [bion](https://t.me/onlybionn)**
+**Owner repo : [amang](https://t.me/amwang)**
 **Python Version :** `{y()}`
 **Library Version :** `{o}`
 **Telethon Version :** `{s}`
@@ -44,9 +44,9 @@ async def repo(_, message):
             [
                 [
                     InlineKeyboardButton(
-                        "Repo", url="https://github.com/BionXP"), 
+                        "Owner", url="https://t.me/amwang"), 
                     InlineKeyboardButton(
-                        "Support", url="https://t.me/ZennXSupport")
+                        "Support", url="https://t.me/amangsupportgrup")
                 ]
             ]
         )
